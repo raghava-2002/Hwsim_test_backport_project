@@ -1,8 +1,0 @@
-To implement a MAC address change logic in a simulated environment using the mac80211_hwsim.c driver, you would need to modify the functions that handle packet transmission and reception.
-
-Here's a high-level overview of how you could do this:
-
-Packet Transmission: In the mac80211_hwsim_tx_frame, mac80211_hwsim_tx_frame_nl, or mac80211_hwsim_tx_frame_no_nl function (depending on whether you're using wmediumd), after the packet has been prepared for transmission but before it's "sent", change the source MAC address in the packet header to X.
-Packet Reception: In the mac80211_hwsim_monitor_rx function, before the packet is passed up the network stack, change the source MAC address in the packet header back to the original MAC address.
-Please note that this is a high-level overview and the exact implementation can vary depending on your specific requirements. Also, keep in mind that this will only change the MAC address in the simulated environment and won't affect the actual MAC address of any real network interfaces.
-
