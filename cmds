@@ -1,0 +1,93 @@
+// invoking the mac80211_hwsim with two radios 
+
+sudo modprobe mac80211_hwsim radios=2
+
+// making wlan0 as AP in the background writing the logs in to a file 
+// make sure to kill the process before rerunning the hostapd 
+
+sudo hostapd -B -f hostapd.log -i wlan0 hostapd.conf
+
+// orelse you directly run on the terminal 
+// ctrl + c to kill the process 
+
+//for detailed logs for hostapd we need to add few lines to the configuration file
+
+/*logger_syslog=-1
+logger_syslog_level=2
+logger_stdout=-1
+logger_stdout_level=2
+
+#change levels according for the use
+#0 = verbose (very detailed logs)
+#1 = debugging
+#2 = informational messages
+#3 = notifications
+#4 = warnings
+
+*/
+
+sudo hostapd -i wlan0 hostapd.conf
+
+// adding ip to the interface 
+sudo ip addr add 192.168.42.1/24 dev wlan0
+
+// similarly to the wlan1 as wpa_supplicant write logs in the file
+// kill after wards 
+
+wpa_supplicant -B -c wpa_supplicant.conf -f wpa_supplicant.log -i wlan1
+
+// add -dd for detailed logs for wpa_supplicant 
+sudo wpa_supplicant -c wpa_supplicant.conf -i wlan1
+
+sudo ip addr add 192.168.42.5/24 dev wlan1
+
+// eventhough revoking mac80211 doesn't mean kill the process hostapd and wpa_supplicant
+// use $ sudo pkill hostapd
+// sudo pkill wpa_supplicant
+
+
+sudo modprobe -r mac80211_hwsim
+
+
+
+//we can ping each station or ap using ping
+
+ping -I <from ip>  < to ip>
+
+ping -I 192.168.42.5 192.168.42.1
+
+
+
+// to create a sperate namspace
+
+/on client 1 terminal
+
+sudo ip netns exec client1 bash
+
+echo $BASHPID 
+
+
+
+
+/on main terminal
+
+
+sudo ip netns add client1 
+
+sudo iw phy phy1 set netns <pid> 
+
+
+transfer large files 
+
+on sender Ap
+
+sudo cat /home/rathan/Downloads/ap/ubuntu-24.04-desktop-amd64.iso | nc -s 192.168.42.1 -l -p 1234
+
+
+on receiver mostly station
+
+nc 192.168.42.1 1234 > /home/rathan/Downloads/sta/rathan.iso
+
+
+
+

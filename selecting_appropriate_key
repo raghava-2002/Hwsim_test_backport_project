@@ -1,0 +1,92 @@
+
+
+Simple explanation for selecting the key.
+
+
+The ieee80211_tx_h_select_key function is responsible for selecting the appropriate encryption key for a given transmission in an IEEE 802.11 wireless network. Let's go through the function step by step to understand how it works:
+
+The function takes a pointer to an ieee80211_tx_data structure named tx as its parameter. This structure contains information about the transmission, such as the packet to be transmitted (tx->skb), the station (tx->sta), and the key to be used (tx->key).
+
+Inside the function, several variables are declared, including key, info, and hdr. These variables will be used to store references to the encryption key, the transmission information, and the packet header, respectively.
+
+The function first checks if the IEEE80211_TX_INTFL_DONT_ENCRYPT flag is set in the transmission information. If this flag is set, it means that encryption should not be applied to the transmission. In this case, the tx->key is set to NULL, and the function returns TX_CONTINUE, indicating that the transmission should proceed without encryption.
+
+If the IEEE80211_TX_INTFL_DONT_ENCRYPT flag is not set, the function proceeds to select the appropriate encryption key based on various conditions.
+
+The function checks if the station (tx->sta) is not NULL and if a pairwise transient key (PTK) exists for the station at the specified index (tx->sta->ptk[tx->sta->ptk_idx]). If both conditions are true, the PTK is assigned to tx->key.
+
+If the previous condition is not met, the function checks if the transmission is a group privacy action frame and if a default multicast key exists for the wireless interface (tx->sdata->default_multicast_key). If both conditions are true, the default multicast key is assigned to tx->key.
+
+If the previous conditions are not met, the function checks if the transmission is a management frame, if the destination address is a multicast address, if the transmission is a robust management frame, and if a default management key exists for the wireless interface. If all conditions are true, the default management key is assigned to tx->key.
+
+If the previous conditions are not met, the function checks if the destination address is a multicast address and if a default multicast key exists for the wireless interface. If both conditions are true, the default multicast key is assigned to tx->key.
+
+If the previous conditions are not met, the function checks if the destination address is not a multicast address and if a default unicast key exists for the wireless interface. If both conditions are true, the default unicast key is assigned to tx->key.
+
+If none of the above conditions are met, tx->key is set to NULL.
+
+If tx->key is not NULL, the function performs additional checks based on the cipher type of the key. Depending on the cipher type, the function may modify tx->key or set it to NULL in certain cases.
+
+Finally, the function checks if tx->key is not NULL and if the key is flagged as tainted (KEY_FLAG_TAINTED). If both conditions are true and the frame control of the packet is not a deauthentication frame, the function returns TX_DROP, indicating that the transmission should be dropped.
+
+If the transmission is not dropped, the function checks if skip_hw is false and if tx->key is not NULL and has been uploaded to the hardware (KEY_FLAG_UPLOADED_TO_HARDWARE). If these conditions are met, the hardware key is set in the transmission information.
+
+If tx->key is NULL and the frame control of the packet is not a management frame, and the station (tx->sta) is not NULL and uses encryption (WLAN_STA_USES_ENCRYPTION flag), the function returns TX_DROP, indicating that the transmission should be dropped.
+
+If none of the above conditions are met, the function returns TX_CONTINUE, indicating that the transmission should proceed.
+
+In summary, the ieee80211_tx_h_select_key function selects the appropriate encryption key for a transmission based on various conditions, including the type of frame, destination address, and the presence of specific keys. It also performs checks on the key's cipher type and flags to determine if the transmission should be dropped or if the hardware key should be set.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//these codes are used to debug the PTK keys of AP (w.r.t station) and STA
+	/* if (sta != NULL){
+		dest_mac_addr = sta->sta.addr;
+		if (sta->sdata->vif.type == NL80211_IFTYPE_AP){
+			packet_sent_from_ap = true;
+			
+			//printk(KERN_DEBUG "inter %pM dest %pM\n", interface_mac_addr, dest_mac_addr);
+			rcu_read_lock();
+			list_for_each_entry(sta, &local->sta_list, list) {
+            if (memcmp(sta->sta.addr, dest_mac_addr, ETH_ALEN) == 0) {
+                // Station found, retrieve the PTK
+				key = rcu_dereference(sta->ptk[sta->ptk_idx]);
+                if (key) {
+                    printk(KERN_DEBUG "inter %pM dest %pM\n", interface_mac_addr, dest_mac_addr);
+					printk(KERN_DEBUG "PTK for station %*ph\n", key->conf.keylen, key->conf.key);
+                } else {
+                    printk(KERN_DEBUG "No PTK for station ");
+                }
+                break;
+            }
+			rcu_read_unlock();
+			//printk(KERN_DEBUG "Rathan: 2 ptk key %*ph", key->conf.keylen, key->conf.key);
+			//test_func(local, skb, sta, 1, current_tp);
+			}
+			//printk(KERN_DEBUG "Rathan: 3 ptk key %*ph", key->conf.keylen, key->conf.key);
+		}else if (sta->sdata->vif.type == NL80211_IFTYPE_STATION){
+			packet_sent_from_sta = true;
+			
+			printk(KERN_DEBUG "inter %pM dest %pM\n", interface_mac_addr, dest_mac_addr);
+			if (sta && (key = rcu_dereference(sta->ptk[sta->ptk_idx]))) {
+			
+				printk(KERN_DEBUG "Rathan: ptk key %*ph", key->conf.keylen, key->conf.key);
+				
+			}else{
+				printk(KERN_DEBUG "Rathan: No PTK for station ");
+			}
+
+		}
+	} */

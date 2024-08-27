@@ -1,0 +1,334 @@
+[ 5515.869136] Rathan: ieee80211_beacon_add_tim function called
+[ 5515.869139] Rathan: __ieee80211_beacon_add_tim function called
+[ 6725.011623] Rathan: __ieee80211_beacon_get function called
+The above two functions are called for every beacons sending by the AP
+
+
+
+[ 6299.496073] Rathan: chill man i wrote this line to know the hwsim starts here
+[ 6299.496074] mac80211_hwsim: initializing netlink
+[ 6299.496100] Rathan hwname: phy6
+
+below function invoked to setup an interface
+
+[ 6299.496148] Rathan: ieee80211_txq_setup_flows function called
+[ 6299.496151] ieee80211 phy6: Selected rate control algorithm 'minstrel_ht'
+[ 6299.499475] Rathan hwname: phy7
+[ 6299.499522] Rathan: ieee80211_txq_setup_flows function called
+[ 6299.499526] ieee80211 phy7: Selected rate control algorithm 'minstrel_ht'
+[ 6299.708540] Rathan: ieee80211_probereq_get function called
+[ 6299.708547] Rathan: __ieee80211_tx_skb_tid_band function called
+[ 6299.708548] Rathan: ieee80211_xmit function called
+[ 6299.708549] Rathan: ieee80211_skb_resize function called
+[ 6299.708551] Rathan: ieee80211_tx function called
+[ 6299.708552] Rathan: ieee80211_tx_prepare function called
+[ 6299.708553] Rathan: invoke_tx_handlers_early function called
+[ 6299.708553] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6299.708554] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6299.708555] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6299.708555] Rathan: ieee80211_tx_h_multicast_ps_buf function called
+[ 6299.708556] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6299.708557] Rathan: ieee80211_tx_h_select_key function called
+[ 6299.708558] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6299.708559] Rathan: ieee80211_queue_skb function called
+[ 6299.708560] Rathan: invoke_tx_handlers_late function called
+[ 6299.708561] Rathan: ieee80211_tx_h_sequence function called
+[ 6299.708562] Rathan: ieee80211_tx_h_fragment function called
+[ 6299.708563] Rathan: ieee80211_tx_h_stats function called
+[ 6299.708563] Rathan: ieee80211_tx_h_encrypt function called
+[ 6299.708564] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6299.708564] Rathan: ieee80211_duration function called
+[ 6299.708565] Rathan: __ieee80211_tx function called
+[ 6299.708566] Rathan: ieee80211_tx_frags function called
+
+these parts reoccurs every time eventhough the iterface is not assigned with any functionality 
+
+
+[ 6299.732489] Rathan: ieee80211_probereq_get function called
+[ 6299.732496] Rathan: __ieee80211_tx_skb_tid_band function called
+[ 6299.732497] Rathan: ieee80211_xmit function called
+[ 6299.732498] Rathan: ieee80211_skb_resize function called
+[ 6299.732499] Rathan: ieee80211_tx function called
+[ 6299.732500] Rathan: ieee80211_tx_prepare function called
+[ 6299.732501] Rathan: invoke_tx_handlers_early function called
+[ 6299.732502] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6299.732503] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6299.732504] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6299.732504] Rathan: ieee80211_tx_h_multicast_ps_buf function called
+[ 6299.732505] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6299.732506] Rathan: ieee80211_tx_h_select_key function called
+[ 6299.732507] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6299.732509] Rathan: ieee80211_queue_skb function called
+[ 6299.732510] Rathan: invoke_tx_handlers_late function called
+[ 6299.732511] Rathan: ieee80211_tx_h_sequence function called
+[ 6299.732512] Rathan: ieee80211_tx_h_fragment function called
+[ 6299.732513] Rathan: ieee80211_tx_h_stats function called
+[ 6299.732514] Rathan: ieee80211_tx_h_encrypt function called
+[ 6299.732514] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6299.732515] Rathan: ieee80211_duration function called
+[ 6299.732516] Rathan: __ieee80211_tx function called
+[ 6299.732517] Rathan: ieee80211_tx_frags function called
+
+
+
+i think ieee80211_tx_frags is executed last for every packet in tx.c file 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ 6977.998626] Rathan: ieee80211_tx_h_select_key function called
+[ 6977.998627] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6977.998633] Rathan: ieee80211_queue_skb function called
+[ 6977.998634] Rathan: invoke_tx_handlers_late function called
+[ 6977.998635] Rathan: ieee80211_tx_h_sequence function called
+[ 6977.998637] Rathan: ieee80211_tx_h_fragment function called
+[ 6977.998638] Rathan: ieee80211_tx_h_stats function called
+[ 6977.998639] Rathan: ieee80211_tx_h_encrypt function called
+[ 6977.998657] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6977.998658] Rathan: ieee80211_duration function called
+[ 6977.998660] Rathan: __ieee80211_tx function called
+[ 6977.998661] Rathan: ieee80211_tx_frags function called
+[ 6977.998715] Rathan: ieee80211_subif_start_xmit function called
+[ 6977.998716] Rathan: ieee80211_multicast_to_unicast function called
+[ 6977.998717] Rathan: __ieee80211_subif_start_xmit function called
+[ 6977.998718] Rathan: ieee80211_lookup_ra_sta function called
+[ 6977.998719] Rathan: ieee80211_build_hdr function called
+[ 6977.998721] Rathan: ieee80211_tx_stats function called
+[ 6977.998722] Rathan: ieee80211_xmit function called
+[ 6977.998723] Rathan: ieee80211_skb_resize function called
+[ 6977.998724] Rathan: ieee80211_tx function called
+[ 6977.998725] Rathan: ieee80211_tx_prepare function called
+[ 6977.998726] Rathan: invoke_tx_handlers_early function called
+[ 6977.998727] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6977.998727] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6977.998728] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6977.998729] Rathan: ieee80211_tx_h_multicast_ps_buf function called
+[ 6977.998730] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6977.998731] Rathan: ieee80211_tx_h_select_key function called
+[ 6977.998732] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6977.998733] Rathan: ieee80211_queue_skb function called
+[ 6977.998734] Rathan: invoke_tx_handlers_late function called
+[ 6977.998735] Rathan: ieee80211_tx_h_sequence function called
+[ 6977.998736] Rathan: ieee80211_tx_h_fragment function called
+[ 6977.998736] Rathan: ieee80211_tx_h_stats function called
+[ 6977.998737] Rathan: ieee80211_tx_h_encrypt function called
+[ 6977.998744] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6977.998745] Rathan: ieee80211_duration function called
+[ 6977.998746] Rathan: __ieee80211_tx function called
+[ 6977.998747] Rathan: ieee80211_tx_frags function called
+[ 6978.974737] Rathan: ieee80211_subif_start_xmit function called
+[ 6978.974739] Rathan: ieee80211_multicast_to_unicast function called
+[ 6978.974741] Rathan: __ieee80211_subif_start_xmit function called
+[ 6978.974742] Rathan: ieee80211_lookup_ra_sta function called
+[ 6978.974744] Rathan: ieee80211_build_hdr function called
+[ 6978.974745] Rathan: ieee80211_tx_stats function called
+[ 6978.974746] Rathan: ieee80211_xmit function called
+[ 6978.974747] Rathan: ieee80211_skb_resize function called
+[ 6978.974749] Rathan: ieee80211_tx function called
+[ 6978.974750] Rathan: ieee80211_tx_prepare function called
+[ 6978.974751] Rathan: invoke_tx_handlers_early function called
+[ 6978.974752] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6978.974760] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6978.974761] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6978.974762] Rathan: ieee80211_tx_h_unicast_ps_buf function called
+[ 6978.974763] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6978.974764] Rathan: ieee80211_tx_h_select_key function called
+[ 6978.974765] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6978.974770] Rathan: ieee80211_queue_skb function called
+[ 6978.974771] Rathan: invoke_tx_handlers_late function called
+[ 6978.974772] Rathan: ieee80211_tx_h_sequence function called
+[ 6978.974773] Rathan: ieee80211_tx_h_fragment function called
+[ 6978.974774] Rathan: ieee80211_tx_h_stats function called
+[ 6978.974775] Rathan: ieee80211_tx_h_encrypt function called
+[ 6978.974791] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6978.974792] Rathan: ieee80211_duration function called
+[ 6978.974793] Rathan: __ieee80211_tx function called
+[ 6978.974794] Rathan: ieee80211_tx_frags function called
+[ 6978.974829] Rathan: ieee80211_tx_pending function called
+[ 6978.974832] Rathan: ieee80211_tx_pending_skb function called
+[ 6978.974834] Rathan: __ieee80211_tx function called
+[ 6978.974835] Rathan: ieee80211_tx_frags function called
+[ 6978.974848] Rathan: ieee80211_subif_start_xmit function called
+[ 6978.974848] Rathan: ieee80211_multicast_to_unicast function called
+[ 6978.974850] Rathan: __ieee80211_subif_start_xmit function called
+[ 6978.974851] Rathan: ieee80211_lookup_ra_sta function called
+[ 6978.974852] Rathan: ieee80211_build_hdr function called
+[ 6978.974854] Rathan: ieee80211_tx_stats function called
+[ 6978.974856] Rathan: ieee80211_xmit function called
+[ 6978.974856] Rathan: ieee80211_skb_resize function called
+[ 6978.974858] Rathan: ieee80211_tx function called
+[ 6978.974859] Rathan: ieee80211_tx_prepare function called
+[ 6978.974860] Rathan: invoke_tx_handlers_early function called
+[ 6978.974861] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6978.974862] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6978.974863] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6978.974864] Rathan: ieee80211_tx_h_unicast_ps_buf function called
+[ 6978.974865] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6978.974866] Rathan: ieee80211_tx_h_select_key function called
+[ 6978.974867] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6978.974871] Rathan: ieee80211_queue_skb function called
+[ 6978.974872] Rathan: invoke_tx_handlers_late function called
+[ 6978.974873] Rathan: ieee80211_tx_h_sequence function called
+[ 6978.974874] Rathan: ieee80211_tx_h_fragment function called
+[ 6978.974875] Rathan: ieee80211_tx_h_stats function called
+[ 6978.974876] Rathan: ieee80211_tx_h_encrypt function called
+[ 6978.974891] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6978.974892] Rathan: ieee80211_duration function called
+[ 6978.974894] Rathan: __ieee80211_tx function called
+[ 6978.974894] Rathan: ieee80211_tx_frags function called
+[ 6978.974926] Rathan: ieee80211_subif_start_xmit function called
+[ 6978.974927] Rathan: ieee80211_multicast_to_unicast function called
+[ 6978.974928] Rathan: __ieee80211_subif_start_xmit function called
+[ 6978.974929] Rathan: ieee80211_lookup_ra_sta function called
+[ 6978.974930] Rathan: ieee80211_build_hdr function called
+[ 6978.974931] Rathan: ieee80211_tx_stats function called
+[ 6978.974932] Rathan: ieee80211_xmit function called
+[ 6978.974933] Rathan: ieee80211_skb_resize function called
+[ 6978.974934] Rathan: ieee80211_tx function called
+[ 6978.974934] Rathan: ieee80211_tx_prepare function called
+[ 6978.974936] Rathan: invoke_tx_handlers_early function called
+[ 6978.974936] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6978.974937] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6978.974938] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6978.974939] Rathan: ieee80211_tx_h_multicast_ps_buf function called
+[ 6978.974940] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6978.974941] Rathan: ieee80211_tx_h_select_key function called
+[ 6978.974942] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6978.974944] Rathan: ieee80211_queue_skb function called
+[ 6978.974945] Rathan: invoke_tx_handlers_late function called
+[ 6978.974945] Rathan: ieee80211_tx_h_sequence function called
+[ 6978.974946] Rathan: ieee80211_tx_h_fragment function called
+[ 6978.974947] Rathan: ieee80211_tx_h_stats function called
+[ 6978.974948] Rathan: ieee80211_tx_h_encrypt function called
+[ 6978.974955] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6978.974956] Rathan: ieee80211_duration function called
+[ 6978.974957] Rathan: __ieee80211_tx function called
+[ 6978.974958] Rathan: ieee80211_tx_frags function called
+[ 6978.974968] Rathan: ieee80211_subif_start_xmit function called
+[ 6978.974969] Rathan: ieee80211_multicast_to_unicast function called
+[ 6978.974970] Rathan: __ieee80211_subif_start_xmit function called
+[ 6978.974971] Rathan: ieee80211_lookup_ra_sta function called
+[ 6978.974972] Rathan: ieee80211_build_hdr function called
+[ 6978.974973] Rathan: ieee80211_tx_stats function called
+[ 6978.974974] Rathan: ieee80211_xmit function called
+[ 6978.974975] Rathan: ieee80211_skb_resize function called
+[ 6978.974975] Rathan: ieee80211_tx function called
+[ 6978.974976] Rathan: ieee80211_tx_prepare function called
+[ 6978.974977] Rathan: invoke_tx_handlers_early function called
+[ 6978.974978] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 6978.974979] Rathan: ieee80211_tx_h_check_assoc function called
+[ 6978.974980] Rathan: ieee80211_tx_h_ps_buf function called
+[ 6978.974980] Rathan: ieee80211_tx_h_multicast_ps_buf function called
+[ 6978.974981] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 6978.974982] Rathan: ieee80211_tx_h_select_key function called
+[ 6978.974983] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 6978.974984] Rathan: ieee80211_queue_skb function called
+[ 6978.974985] Rathan: invoke_tx_handlers_late function called
+[ 6978.974985] Rathan: ieee80211_tx_h_sequence function called
+[ 6978.974986] Rathan: ieee80211_tx_h_fragment function called
+[ 6978.974987] Rathan: ieee80211_tx_h_stats function called
+[ 6978.974988] Rathan: ieee80211_tx_h_encrypt function called
+[ 6978.974992] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 6978.974993] Rathan: ieee80211_duration function called
+[ 6978.974994] Rathan: __ieee80211_tx function called
+
+
+
+
+
+
+
+when a single packet of ccmp sent from AP to station
+
+[ 7198.775705] Rathan: ieee80211_subif_start_xmit function called
+[ 7198.775707] Rathan: ieee80211_multicast_to_unicast function called
+[ 7198.775709] Rathan: __ieee80211_subif_start_xmit function called
+[ 7198.775710] Rathan: ieee80211_lookup_ra_sta function called
+[ 7198.775712] Rathan: ieee80211_build_hdr function called
+[ 7198.775714] Rathan: ieee80211_tx_stats function called
+[ 7198.775715] Rathan: ieee80211_xmit function called
+[ 7198.775716] Rathan: ieee80211_skb_resize function called
+[ 7198.775717] Rathan: ieee80211_tx function called
+[ 7198.775718] Rathan: ieee80211_tx_prepare function called
+[ 7198.775720] Rathan: invoke_tx_handlers_early function called
+[ 7198.775721] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 7198.775722] Rathan: ieee80211_tx_h_check_assoc function called
+[ 7198.775723] Rathan: ieee80211_tx_h_ps_buf function called
+[ 7198.775723] Rathan: ieee80211_tx_h_unicast_ps_buf function called
+[ 7198.775724] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 7198.775725] Rathan: ieee80211_tx_h_select_key function called
+[ 7198.775727] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 7198.775732] Rathan: ieee80211_queue_skb function called
+[ 7198.775733] Rathan: invoke_tx_handlers_late function called
+[ 7198.775734] Rathan: ieee80211_tx_h_sequence function called
+[ 7198.775735] Rathan: ieee80211_tx_h_fragment function called
+[ 7198.775736] Rathan: ieee80211_tx_h_stats function called
+[ 7198.775737] Rathan: ieee80211_tx_h_encrypt function called
+[ 7198.775753] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 7198.775754] Rathan: ieee80211_duration function called
+[ 7198.775755] Rathan: __ieee80211_tx function called
+[ 7198.775756] Rathan: ieee80211_tx_frags function called
+[ 7198.775797] Rathan: ieee80211_subif_start_xmit function called
+[ 7198.775798] Rathan: ieee80211_multicast_to_unicast function called
+[ 7198.775799] Rathan: __ieee80211_subif_start_xmit function called
+[ 7198.775800] Rathan: ieee80211_lookup_ra_sta function called
+[ 7198.775802] Rathan: ieee80211_build_hdr function called
+[ 7198.775803] Rathan: ieee80211_tx_stats function called
+[ 7198.775804] Rathan: ieee80211_xmit function called
+[ 7198.775805] Rathan: ieee80211_skb_resize function called
+[ 7198.775806] Rathan: ieee80211_tx function called
+[ 7198.775806] Rathan: ieee80211_tx_prepare function called
+[ 7198.775807] Rathan: invoke_tx_handlers_early function called
+[ 7198.775808] Rathan: ieee80211_tx_h_dynamic_ps function called
+[ 7198.775814] Rathan: ieee80211_tx_h_check_assoc function called
+[ 7198.775816] Rathan: ieee80211_tx_h_ps_buf function called
+[ 7198.775817] Rathan: ieee80211_tx_h_unicast_ps_buf function called
+[ 7198.775818] Rathan: ieee80211_tx_h_check_control_port_protocol function called
+[ 7198.775819] Rathan: ieee80211_tx_h_select_key function called
+[ 7198.775821] Rathan: ieee80211_tx_h_rate_ctrl function called
+[ 7198.775823] Rathan: ieee80211_queue_skb function called
+[ 7198.775825] Rathan: invoke_tx_handlers_late function called
+[ 7198.775826] Rathan: ieee80211_tx_h_sequence function called
+[ 7198.775827] Rathan: ieee80211_tx_h_fragment function called
+[ 7198.775829] Rathan: ieee80211_tx_h_stats function called
+[ 7198.775830] Rathan: ieee80211_tx_h_encrypt function called
+[ 7198.775837] Rathan: ieee80211_tx_h_calculate_duration function called
+[ 7198.775839] Rathan: ieee80211_duration function called
+[ 7198.775841] Rathan: __ieee80211_tx function called
+[ 7198.775842] Rathan: ieee80211_tx_frags function called
+
+
