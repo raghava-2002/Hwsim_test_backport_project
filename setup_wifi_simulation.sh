@@ -17,7 +17,7 @@ invoke_mac80211_hwsim() {
 # Function to get the list of current PHY interfaces
 get_phy_interfaces() {
   echo "Fetching current PHY interfaces..."
-  phy_interfaces=($(ls /sys/class/ieee80211/))
+  phy_interfaces=($(ls /sys/class/ieee80211/ | sort -V)) # Sort the interfaces numerically
   total_radios=${#phy_interfaces[@]}
   echo "Total available PHY interfaces: $total_radios"
 

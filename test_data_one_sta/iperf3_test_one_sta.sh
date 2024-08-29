@@ -17,7 +17,7 @@ START_PORT=5201
 
 # Output directory for logs
 # Change the folder for each scheme
-LOG_DIR="/home/rathan/Downloads/hwsim_test/test_data/scheme_1"
+LOG_DIR="/home/rathan/Downloads/hwsim_test/test_data_one_sta/scheme_2"
 mkdir -p $LOG_DIR/tcp
 mkdir -p $LOG_DIR/udp
 
@@ -37,7 +37,7 @@ for i in $(seq 1 $active_namespaces); do
     #sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -t $DURATION -J > $LOG_DIR/tcp/$ns_name.json &
 
     # Run iperf3 in the background and log the output udp
-    sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -u -b 50M -t $DURATION -J > $LOG_DIR/udp/$ns_name.json &
+    sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -u -b 100M -t $DURATION -J > $LOG_DIR/udp/$ns_name.json &
 
     
     echo "Test in namespace $ns_name started. Output will be saved to $LOG_DIR/iperf3_$ns_name.log"
