@@ -32,6 +32,8 @@ create_namespaces_and_interfaces() {
   # Assign the first PHY interface to the AP
   ap_interface=${phy_interfaces[0]}
   echo "AP will be set on $ap_interface"
+  sudo ip netns add ap
+  sudo iw phy ${phy_interfaces[0]} set netns name ap
 
   # Create namespaces and assign interfaces for stations
   for i in $(seq 1 $((total_radios-1))); do
@@ -45,6 +47,7 @@ create_namespaces_and_interfaces() {
     sudo iw phy $phy set netns name $ns_name
   done
   echo "Namespaces and interfaces setup complete."
+  #start_wmediumd
 }
 
 # Function to count the number of active namespaces
@@ -53,36 +56,56 @@ count_namespaces() {
   #echo "Number of active namespaces: $active_namespaces"
 }
 
+start_wmediumd() {
+  echo "Starting wmediumd with custom configuration..."
+  # Replace this with the actual path to your wmediumd config file (2node.cfg or dynamically generated one)
+  /home/rathan/Downloads/hwsim_test/wmediumd/wmediumd/wmediumd -c /home/rathan/Downloads/hwsim_test/wmediumd.cfg > /home/rathan/Downloads/hwsim_test/wmedium.log &
+}
+
+
+#sudo ./wmediumd -c /home/rathan/Downloads/hwsim_test/wmediumd.cfg -l LOG_LVL >= 5 > /home/rathan/Downloads/hwsim_test/wmedium.log &
+
 # Function to run AP on the first available PHY interface
 run_ap() {
   echo "Configuring AP on the first available PHY interface"
 
   # Assign IP address to the first PHY interface
-  sudo ip addr add 192.168.42.1/24 dev wlan0
+  sudo ip netns exec ap ip addr add 192.168.42.1/24 dev wlan0
 
   # Bring the interface up
-  sudo ip link set wlan0 up
+  sudo ip netns exec ap ip link set wlan0 up
+  sudo ip netns exec ap iw dev wlan0 set type ap 
+  sudo ip netns exec ap ifconfig lo up
 
   # Run hostapd on the first PHY interface
-  sudo hostapd -i wlan0 hostapd.conf
+  #sudo rm hostapd_logs/ap.log
+  sudo ip netns exec ap hostapd -i wlan0 -B confs/hostapd.conf -f hostapd_logs/ap.log
+  sudo chmod +r hostapd_logs/ap.log
 }
 
 run_sta() {
 
   count_namespaces
 
-  echo "$active_namespaces radios to run as stations"
+  echo "$((active_namespaces-1)) radios to run as stations"
 
   # Assign IP address to the first PHY interface
-  for i in $(seq 1 $((active_namespaces))); do
+  for i in $(seq 1 $((active_namespaces-1))); do
     ns_name="ns$i"
     sta_interface="wlan$i"
 
     sudo ip netns exec $ns_name ip addr add 192.168.42.$((i+1))/24 dev $sta_interface
-    sudo ip netns exec $ns_name wpa_supplicant -B -c wpa_supplicant.conf -i $sta_interface
+    sudo ip netns exec $ns_name ip link set $sta_interface up
+    sudo ip netns exec $ns_name iw dev $sta_interface set type managed
+    sudo ip netns exec $ns_name ifconfig lo up
+    
+    #sudo rm wpa_logs/sta$i.log
+    sudo ip netns exec $ns_name wpa_supplicant -B -c confs/wpa_supplicant.conf -i $sta_interface -f wpa_logs/sta$i.log
+    sudo chmod +r wpa_logs/sta$i.log
   done
     echo "Namespaces and interfaces setup complete."
 
+  #start_wmediumd
 }
 
 # Function to clean up
@@ -90,11 +113,13 @@ clean() {
   echo "Killing wpa_supplicant and hostapd"
   sudo pkill wpa_supplicant
   sudo pkill hostapd
+  sudo pkill wmediumd
 
   echo "Deleting all namespaces"
   count_namespaces
   # List all network namespaces and delete each one
-  for i in $(seq 1 $((active_namespaces))); do
+  sudo ip netns del ap 
+  for i in $(seq 1 $((active_namespaces-1))); do
     ns_name="ns$i"
     sudo ip netns del $ns_name 
   done
@@ -111,7 +136,8 @@ while true; do
   echo "3. Run AP on the first available PHY interface"
   echo "4. Run STA on the name spaces"
   echo "5. Clean the network and namespaces"
-  echo "6. Exit the menu"
+  echo "6. start wmediumd"
+  echo "7. Exit the menu"
   read option
   case $option in
     1)
@@ -130,6 +156,9 @@ while true; do
       clean
       ;;
     6)
+      start_wmediumd
+      ;;
+    7)
       echo "Exiting... the menu"
       exit
       ;;
