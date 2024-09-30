@@ -9,7 +9,7 @@ from mn_wifi.link import wmediumd
 from mn_wifi.cli import CLI
 from mn_wifi.net import Mininet_wifi
 from mn_wifi.wmediumdConnector import interference
-
+import matplotlib.pyplot as plt
 
 def topology(args):
     "Create a network."
@@ -18,9 +18,9 @@ def topology(args):
 
     info("*** Creating nodes\n")
     ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36',
-                             position='15,30,0',passwd='123456789a', encrypt='wpa2', rsn_pairwise='CCMP', failMode="standalone", datapath='user')
+                             position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='user')
     sta1 = net.addStation('sta1', ip='192.168.42.2/24',
-                   position='10,20,0', passwd='123456789a', encrypt='wpa2')
+                   position='100,120,0', passwd='123456789a', encrypt='wpa3')
     #net.addStation('sta2', mac='00:00:00:00:00:03', ip='10.0.0.2/8',
     #               position='20,50,0', passwd='123456789a', encrypt='wpa2')
     #net.addStation('sta3', mac='00:00:00:00:00:04', ip='10.0.0.3/8',
@@ -37,12 +37,14 @@ def topology(args):
     ap1.setIP('192.168.42.1/24', intf='ap1-wlan1')
 
     if '-p' not in args:
-        net.plotGraph(max_x=100, max_y=100)
+        net.plotGraph(max_x=400, max_y=400)
 
     info("*** Starting network\n")
     net.build()
     ap1.start([])
-    
+    info("*** Plotting network graph\n")
+    # Save the plot as a PNG file
+    plt.savefig('/home/rathan/Downloads/hwsim_test/mininet_wifi_topology.png')  # Save the figure to a file
     # Disable promiscuous mode on the AP interface
     ap1.cmd('ifconfig ap1-wlan1 -promisc')
 
