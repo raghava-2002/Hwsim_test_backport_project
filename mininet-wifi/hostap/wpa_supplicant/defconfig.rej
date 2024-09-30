@@ -1,0 +1,63 @@
+--- wpa_supplicant/defconfig
++++ wpa_supplicant/defconfig
+@@ -172,12 +172,12 @@ CONFIG_EAP_TNC=y
+ # Wi-Fi Protected Setup (WPS)
+ CONFIG_WPS=y
+ # Enable WPS external registrar functionality
+-#CONFIG_WPS_ER=y
++CONFIG_WPS_ER=y
+ # Disable credentials for an open network by default when acting as a WPS
+ # registrar.
+-#CONFIG_WPS_REG_DISABLE_OPEN=y
++CONFIG_WPS_REG_DISABLE_OPEN=y
+ # Enable WPS support with NFC config method
+-#CONFIG_WPS_NFC=y
++CONFIG_WPS_NFC=y
+ 
+ # EAP-IKEv2
+ CONFIG_EAP_IKEV2=y
+@@ -232,7 +232,7 @@ CONFIG_CTRL_IFACE=y
+ 
+ # Include internal line edit mode in wpa_cli. This can be used as a replacement
+ # for GNU Readline to provide limited command line editing and history support.
+-#CONFIG_WPA_CLI_EDIT=y
++CONFIG_WPA_CLI_EDIT=y
+ 
+ # Remove debugging code that is printing out debug message to stdout.
+ # This can be used to reduce the size of the wpa_supplicant considerably
+@@ -495,7 +495,7 @@ CONFIG_IEEE80211AX=y
+ 
+ # Wireless Network Management (IEEE Std 802.11v-2011)
+ # Note: This is experimental and not complete implementation.
+-#CONFIG_WNM=y
++CONFIG_WNM=y
+ 
+ # Interworking (IEEE 802.11u)
+ # This can be used to enable functionality to improve interworking with
+@@ -585,7 +585,7 @@ CONFIG_WIFI_DISPLAY=y
+ #
+ # For more details refer to:
+ # http://wireless.kernel.org/en/users/Documentation/acs
+-#CONFIG_ACS=y
++CONFIG_ACS=y
+ 
+ # Support Multi Band Operation
+ #CONFIG_MBO=y
+@@ -606,7 +606,7 @@ CONFIG_IBSS_RSN=y
+ #CONFIG_PMKSA_CACHE_EXTERNAL=y
+ 
+ # Mesh Networking (IEEE 802.11s)
+-#CONFIG_MESH=y
++CONFIG_MESH=y
+ 
+ # Background scanning modules
+ # These can be used to request wpa_supplicant to perform background scanning
+@@ -616,7 +616,7 @@ CONFIG_IBSS_RSN=y
+ CONFIG_BGSCAN_SIMPLE=y
+ # Learn channels used by the network and try to avoid bgscans on other
+ # channels (experimental)
+-#CONFIG_BGSCAN_LEARN=y
++CONFIG_BGSCAN_LEARN=y
+ 
+ # Opportunistic Wireless Encryption (OWE)
+ # Experimental implementation of draft-harkins-owe-07.txt
