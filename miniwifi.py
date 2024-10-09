@@ -17,10 +17,13 @@ def topology(args):
                        noise_th=-91, fading_cof=3)
 
     info("*** Creating nodes\n")
-    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36',
+    # mode a = 5GHz, channel 36
+    # mode b = 2.4GHz channel 1
+    # modes are a, b, g, n
+    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36', ht_cap='HT20',
                              position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='user')
     sta1 = net.addStation('sta1', ip='192.168.42.2/24',
-                   position='100,120,0', passwd='123456789a', encrypt='wpa3')
+                   position='100,120,0', passwd='123456789a', encrypt='wpa3', ht_cap='HT20')
     #net.addStation('sta2', mac='00:00:00:00:00:03', ip='10.0.0.2/8',
     #               position='20,50,0', passwd='123456789a', encrypt='wpa2')
     #net.addStation('sta3', mac='00:00:00:00:00:04', ip='10.0.0.3/8',
@@ -37,7 +40,7 @@ def topology(args):
     ap1.setIP('192.168.42.1/24', intf='ap1-wlan1')
 
     if '-p' not in args:
-        net.plotGraph(max_x=400, max_y=400)
+        net.plotGraph(max_x=250, max_y=250)
 
     info("*** Starting network\n")
     net.build()

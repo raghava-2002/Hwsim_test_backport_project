@@ -1,0 +1,87 @@
+Executing: program /usr/bin/ssh host 192.168.42.1, user root, command scp -v -t /home/username
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.11, OpenSSL 1.1.1f  31 Mar 2020
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to 192.168.42.1 [192.168.42.1] port 22.
+debug1: Connection established.
+debug1: identity file /root/.ssh/id_rsa type 0
+debug1: identity file /root/.ssh/id_rsa-cert type -1
+debug1: identity file /root/.ssh/id_dsa type -1
+debug1: identity file /root/.ssh/id_dsa-cert type -1
+debug1: identity file /root/.ssh/id_ecdsa type -1
+debug1: identity file /root/.ssh/id_ecdsa-cert type -1
+debug1: identity file /root/.ssh/id_ecdsa_sk type -1
+debug1: identity file /root/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /root/.ssh/id_ed25519 type -1
+debug1: identity file /root/.ssh/id_ed25519-cert type -1
+debug1: identity file /root/.ssh/id_ed25519_sk type -1
+debug1: identity file /root/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /root/.ssh/id_xmss type -1
+debug1: identity file /root/.ssh/id_xmss-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11
+debug1: Remote protocol version 2.0, remote software version OpenSSH_8.2p1 Ubuntu-4ubuntu0.11
+debug1: match: OpenSSH_8.2p1 Ubuntu-4ubuntu0.11 pat OpenSSH* compat 0x04000000
+debug1: Authenticating to 192.168.42.1:22 as 'root'
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ecdsa-sha2-nistp256 SHA256:qm89Sbyn1xdSdx+7S8hBwLGzkKxDHTK8i0wqenE9Juc
+debug1: Host '192.168.42.1' is known and matches the ECDSA host key.
+debug1: Found key in /root/.ssh/known_hosts:1
+debug1: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /root/.ssh/id_rsa RSA SHA256:gBwWDyLQ3t1dw8DN2AiZl+gyLn41UUT6KMZqt/1AE0Y
+debug1: Will attempt key: /root/.ssh/id_dsa 
+debug1: Will attempt key: /root/.ssh/id_ecdsa 
+debug1: Will attempt key: /root/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /root/.ssh/id_ed25519 
+debug1: Will attempt key: /root/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /root/.ssh/id_xmss 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey,password
+debug1: Next authentication method: publickey
+debug1: Offering public key: /root/.ssh/id_rsa RSA SHA256:gBwWDyLQ3t1dw8DN2AiZl+gyLn41UUT6KMZqt/1AE0Y
+debug1: Server accepts key: /root/.ssh/id_rsa RSA SHA256:gBwWDyLQ3t1dw8DN2AiZl+gyLn41UUT6KMZqt/1AE0Y
+debug1: Authentication succeeded (publickey).
+Authenticated to 192.168.42.1 ([192.168.42.1]:22).
+debug1: channel 0: new [client-session]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: network
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: Remote: /root/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Remote: /root/.ssh/authorized_keys:1: key options: agent-forwarding port-forwarding pty user-rc x11-forwarding
+debug1: Sending environment.
+debug1: Sending env LC_ADDRESS = sv_SE.UTF-8
+debug1: Sending env LC_NAME = sv_SE.UTF-8
+debug1: Sending env LC_MONETARY = sv_SE.UTF-8
+debug1: Sending env LANG = C.UTF-8
+debug1: Sending env LC_PAPER = sv_SE.UTF-8
+debug1: Sending env LC_IDENTIFICATION = sv_SE.UTF-8
+debug1: Sending env LC_TELEPHONE = sv_SE.UTF-8
+debug1: Sending env LC_MEASUREMENT = sv_SE.UTF-8
+debug1: Sending env LC_CTYPE = C.UTF-8
+debug1: Sending env LC_TIME = sv_SE.UTF-8
+debug1: Sending env LC_NUMERIC = sv_SE.UTF-8
+debug1: Sending command: scp -v -t /home/username
+Sending file modes: C0664 104857600 test_file
+Sink: C0664 104857600 test_file
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+debug1: channel 0: free: client-session, nchannels 1
+debug1: fd 0 clearing O_NONBLOCK
+debug1: fd 2 clearing O_NONBLOCK
+Transferred: sent 104926020, received 19344 bytes, in 24.3 seconds
+Bytes per second: sent 4325004.0, received 797.4
+debug1: Exit status 0

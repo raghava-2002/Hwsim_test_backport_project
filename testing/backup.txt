@@ -1,0 +1,32 @@
+def plot_rssi(stations, rssi_values):
+    positions = [(62,70,0), (40,50,0), (80,75,0), (30,80,0), (100,40,0)]
+    info("*** Plotting rssi graph\n")
+    
+    x_vals = [pos[0] for pos in positions]
+    y_vals = [pos[1] for pos in positions]
+
+    # Plot the RSSI values
+    plt.figure(figsize=(10, 8))  # Increase figure size
+    plt.scatter(x_vals, y_vals, c=rssi_values, cmap='coolwarm_r', s=150)  # Reverse color map for strong signal (red) and weak (blue)
+    plt.colorbar(label='RSSI (dBm)')
+    
+    # Add labels for stations
+    for i, sta in enumerate(stations):
+        plt.text(x_vals[i] + 1, y_vals[i] + 1, f'{sta.name}: {rssi_values[i]:.1f}', fontsize=9, ha='center')
+
+    # Plot AP position
+    plt.scatter(60, 60, c='red', s=200, label='AP (60, 60, 0)', edgecolor='black')
+    plt.text(60, 60, 'AP', fontsize=12, fontweight='bold', color='black', ha='center')
+
+    plt.xlabel('X Position (meters)')
+    plt.ylabel('Y Position (meters)')
+    plt.xlim(0, 125)  # Extend the x-limit to prevent labels from being cut off
+    plt.ylim(0, 125)  # Extend the y-limit similarly
+    plt.title('RSSI Heatmap')
+    plt.grid(True)
+    plt.savefig('/home/rathan/Downloads/hwsim_test/testing/rssi_improved.png')  # Save the figure to a file
+
+
+
+
+    
