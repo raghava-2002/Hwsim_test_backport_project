@@ -42,7 +42,7 @@ int netlink_response_handler(struct nl_msg *msg, void *arg) {
     for (i = 0; i < data_len; i++) {
         pos += snprintf(pos, sizeof(log_message) - (pos - log_message), "%02x ", raw_data[i]);
     }
-    log_to_file(log_message);  // Log the raw data
+    //log_to_file(log_message);  // Log the raw data
 
     // Extract the base MAC address from the received message
     memcpy(response->s_base_mac, raw_data, ETH_ALEN);
@@ -57,7 +57,7 @@ int netlink_response_handler(struct nl_msg *msg, void *arg) {
     // Log the sequence number in the response
     snprintf(log_message, sizeof(log_message),
              "Received message with seq_num: %u\n", nlh->nlmsg_seq);
-    log_to_file(log_message);
+    //log_to_file(log_message);
 
     return NL_OK;
 }
@@ -115,7 +115,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
 
     // Log the sequence number
     snprintf(mac_log_message, sizeof(mac_log_message), "Netlink message sent to kernel with seq_num: %u\n", seq_num);
-    log_to_file(mac_log_message);
+    //log_to_file(mac_log_message);
 
     ret = nla_put(msg, 1, ETH_ALEN, random_mac);  // Assuming attribute 1 is the MAC address
     if (ret < 0) {
@@ -163,7 +163,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
         free(response);
         return NULL;
     } else {
-        log_to_file("Received response from Netlink successfully\n");
+        //log_to_file("Received response from Netlink successfully\n");
     }
 
     // Check if the callback was triggered by checking if we have valid data

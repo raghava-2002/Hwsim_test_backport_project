@@ -403,11 +403,10 @@ void queue_frame(struct wmediumd *ctx, struct station *station,
 	
 
 	
-	// Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype)
-	if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
-		w_logf(ctx, LOG_DEBUG, "Custom frame detected with frame control in queue function: %02x%02x\n", 
-			(u32)hdr->frame_control[0], (u32)hdr->frame_control[1]);
-	}
+	// Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype) 
+	/* if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
+		w_logf(ctx, LOG_DEBUG, "Custom frame detected with frame control in queue function: %02x%02x\n", (u32)hdr->frame_control[0], (u32)hdr->frame_control[1]);
+	} */
 
 	int ack_time_usec = pkt_duration(ctx, 14, index_to_rate(0, frame->freq)) +
 			sifs;
@@ -427,7 +426,7 @@ void queue_frame(struct wmediumd *ctx, struct station *station,
 	cw = queue->cw_min;
 
 	int snr = SNR_DEFAULT;
-	w_logf(ctx, LOG_DEBUG, " queue_frame called \n");
+	//w_logf(ctx, LOG_DEBUG, " queue_frame called \n");
 	if (is_multicast_ether_addr(dest)) {
 		deststa = NULL;
 	} else {
@@ -539,16 +538,16 @@ static int send_tx_info_frame_nl(struct wmediumd *ctx, struct frame *frame)
 	struct nl_sock *sock = ctx->sock;
 	struct nl_msg *msg;
 	int ret;
-	struct ieee80211_hdr *hdr = (void *) frame->data;
-	bool custom_frame = false;
+	/* struct ieee80211_hdr *hdr = (void *) frame->data;
+	bool custom_frame = false; */
 
-	w_logf(ctx, LOG_DEBUG, "send_tx_info_frame_nl hello\n");
+	/* w_logf(ctx, LOG_DEBUG, "send_tx_info_frame_nl hello\n");
 	// Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype)
 	if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
 		w_logf(ctx, LOG_DEBUG, "Custom frame detected in send_tx_info_frame_nl: %02x%02x\n", 
 			(u32)hdr->frame_control[0], (u32)hdr->frame_control[1]);
 		custom_frame = true;
-	}
+	} */
 	msg = nlmsg_alloc();
 	if (!msg) {
 		w_logf(ctx, LOG_ERR, "Error allocating new message MSG!\n");
@@ -582,14 +581,14 @@ static int send_tx_info_frame_nl(struct wmediumd *ctx, struct frame *frame)
 		ret = -1;
 		goto out;
 	}
-	if (custom_frame) {
+	/* if (custom_frame) {
 		// print the custom frame
 
 		w_logf(ctx, LOG_DEBUG, "DA: " MAC_FMT " SA: " MAC_FMT " addr3: " MAC_FMT " sq: %02x%02x r: " MAC_FMT " cookie: %lu\n", 
 					MAC_ARGS(hdr->addr1), MAC_ARGS(hdr->addr2), MAC_ARGS(hdr->addr3), (u32)hdr->seq_ctrl[0], (u32)hdr->seq_ctrl[1], 
 					MAC_ARGS(frame->sender->hwaddr), frame->cookie);
 		w_logf(ctx, LOG_DEBUG, "sent custom frame sucessfully" );
-	}
+	} */
 
 	ret = 0;
 
@@ -604,14 +603,14 @@ out:
 static int send_tx_info_frame(struct wmediumd *ctx, struct frame *frame)
 {
 
-	struct ieee80211_hdr *hdr = (void *) frame->data;
+	/* struct ieee80211_hdr *hdr = (void *) frame->data;
 
 	w_logf(ctx, LOG_DEBUG, "send_tx_info_frame hello\n");
 	// Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype)
 	if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
 		w_logf(ctx, LOG_DEBUG, "Custom frame detected in send_tx_info_frame: %02x%02x\n", 
 			(u32)hdr->frame_control[0], (u32)hdr->frame_control[1]);
-	}
+	} */
 	
 	if (ctx->op_mode == LOCAL)
 		return send_tx_info_frame_nl(ctx, frame);
@@ -651,7 +650,7 @@ int send_cloned_frame_msg(struct wmediumd *ctx, struct station *dst,
 	struct nl_sock *sock = ctx->sock;
 	int ret;
 
-	w_logf(ctx, LOG_DEBUG, "send_cloned_frame_msg called\n");
+	//w_logf(ctx, LOG_DEBUG, "send_cloned_frame_msg called\n");
 	msg = nlmsg_alloc();
 	if (!msg) {
 		w_logf(ctx, LOG_ERR, "Error allocating new message MSG!\n");
@@ -693,7 +692,7 @@ out:
 	return ret;
 }
 
-#define CUSTOM_FRAME_CONTROL 0x00F0  // Custom frame control value, for example
+//#define CUSTOM_FRAME_CONTROL 0x00F0  // Custom frame control value, for example
 
 void deliver_frame(struct wmediumd *ctx, struct frame *frame)
 {
@@ -704,16 +703,18 @@ void deliver_frame(struct wmediumd *ctx, struct frame *frame)
 	struct station *src_mac, *dest_mac;
 
 
-	w_logf(ctx, LOG_DEBUG, "deliver_frame function called\n");
+	//w_logf(ctx, LOG_DEBUG, "deliver_frame function called\n");
 	// Query the kernel for a base MAC if the source MAC is randomized
 	//for the source MAC
 
 	// Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype)
-	if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
+	/* if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
 		w_logf(ctx, LOG_DEBUG, "Custom frame detected with frame control deliver frame function: %02x%02x\n", 
 			(u32)hdr->frame_control[0], (u32)hdr->frame_control[1]);
-	}
+	} */
 
+	//This is to check if the source MAC is randomized and if so, get the base MAC from the kernel #Srija
+	//this is important for the randomisation schemes where the kernel is responsible for the randomisation
 	src_mac = get_station_by_addr(ctx, src);
 	if (src_mac) {
 		src = src_mac->addr;
@@ -772,7 +773,7 @@ void deliver_frame(struct wmediumd *ctx, struct frame *frame)
 						      frame->data_len,
 						      rate_idx, signal,
 						      frame->freq);
-				w_logf(ctx, LOG_DEBUG, "deliver_frame function dest is multicast address\n");
+				//w_logf(ctx, LOG_DEBUG, "deliver_frame function dest is multicast address\n");
 			} else if (memcmp(dest, station->addr, ETH_ALEN) == 0) {
 				if (set_interference_duration(ctx,
 					frame->sender->index, frame->duration,
@@ -889,14 +890,14 @@ static int process_recvd_data(struct wmediumd *ctx, struct nlmsghdr *nlh)
 	struct ieee80211_hdr *hdr;
 	u8 *src;
 
-	w_logf(ctx, LOG_DEBUG, "process_recvd_data called\n");
+	//w_logf(ctx, LOG_DEBUG, "process_recvd_data called\n");
 
     // Assuming custom frame type 00 and subtype 1111 (0xF0 for subtype)
-    hdr = (struct ieee80211_hdr *)nlmsg_data(nlh);
+    /* hdr = (struct ieee80211_hdr *)nlmsg_data(nlh);
     if ((hdr->frame_control[0] & 0xF0) == 0xF0) {
         w_logf(ctx, LOG_DEBUG, "Custom frame detected in process_recvd_data\n");
         // Handle custom frame
-    }
+    } */
 	if (gnlh->cmd == HWSIM_CMD_FRAME) {
 		pthread_rwlock_rdlock(&snr_lock);
 		/* we get the attributes*/
@@ -988,7 +989,7 @@ struct frame* construct_tx_info_frame(struct wmediumd *ctx, struct nlmsghdr *nlh
 	struct frame *frame = NULL;
 	struct ieee80211_hdr *hdr;
 
-	w_logf(ctx, LOG_DEBUG, "construct_tx_info_frame called\n");
+	//w_logf(ctx, LOG_DEBUG, "construct_tx_info_frame called\n");
 	if (gnlh->cmd == HWSIM_CMD_FRAME){
 		genlmsg_parse(nlh, 0, attrs, HWSIM_ATTR_MAX, NULL);
 		u8 *hwaddr = (u8 *)nla_data(attrs[HWSIM_ATTR_ADDR_TRANSMITTER]);
@@ -1025,7 +1026,7 @@ static int process_messages_cb(struct nl_msg *msg, void *arg)
 	struct nlmsghdr *nlh = nlmsg_hdr(msg);
 	struct wmediumd* ctx = (struct wmediumd*)arg;
 	
-	w_logf(ctx, LOG_DEBUG, "process_messages_cb called\n");
+	//w_logf(ctx, LOG_DEBUG, "process_messages_cb called\n");
 	if (ctx->op_mode == LOCAL)
 		return process_recvd_data(ctx, nlh);
 	
@@ -1069,7 +1070,7 @@ int send_register_msg(struct wmediumd *ctx)
 	struct nl_msg *msg;
 	int ret;
 
-	w_logf(ctx, LOG_DEBUG, "send_register_msg called\n");
+	//w_logf(ctx, LOG_DEBUG, "send_register_msg called\n");
 	msg = nlmsg_alloc();
 	if (!msg) {
 		w_logf(ctx, LOG_ERR, "Error allocating new message MSG!\n");
@@ -1105,7 +1106,7 @@ static void net_sock_event_cb(int fd, short what, void *data)
 	struct frame tx_info_frame;
 	bzero(in_buf, PAGE_SIZE);
 
-	w_logf(ctx, LOG_DEBUG, "net_sock_event_cb called\n");
+	//w_logf(ctx, LOG_DEBUG, "net_sock_event_cb called\n");
 	if (is_ap){
 		numBytes = recvfrom(fd, in_buf, PAGE_SIZE, 0, (struct sockaddr*)&clientAddr, &len);
         if (numBytes < 0){

@@ -1,3 +1,8 @@
+old logs for refernce only 
+
+uncomment those lines to see this logs for debugging
+
+
 wmediumd tool starting here
 mac table not found, so ask kernel
 Inside Starting MAC search in kernel
@@ -31,3 +36,19 @@ Netlink message sent to kernel successfully
 Received raw data from kernel (seq_num: 4): 02 00 00 00 00 00 00 00 c1 00 00 00 00 00 00 00 f0 53 01 5b 58 55 Extracted base MAC from kernel: 02:00:00:00:00:00
 Received message with seq_num: 4
 Received response from Netlink successfully
+
+
+
+new logs after comment of debugging logs
+
+wmediumd tool starting here
+mac table not found, so ask kernel
+Inside Starting MAC search in kernel
+Sending random MAC to kernel: 86:25:1f:0d:50:44
+Netlink message sent to kernel successfully
+Extracted base MAC from kernel: 02:00:00:00:00:00
+mac table not found, so ask kernel
+Inside Starting MAC search in kernel
+Sending random MAC to kernel: 8a:bd:15:83:73:c5
+Netlink message sent to kernel successfully
+Extracted base MAC from kernel: 02:00:00:00:00:00
