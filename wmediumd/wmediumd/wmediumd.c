@@ -302,24 +302,44 @@ static struct station *get_station_by_addr(struct wmediumd *ctx, u8 *addr)
 {
 	struct station *station;
 	struct mac_pair *mac_translation;
+	struct mac_table *entry;
+	
 	//w_flogf(ctx, LOG_ERR,  stderr, "ERR rathan get station by addr function called list is  \n");
 	
+	//step1 : check if the station is already in the list of stations (wmediummd interacts with the kernel via Netlink to get the list of stations) #Srija
 	list_for_each_entry(station, &ctx->stations, list) {
-		w_logf(ctx, LOG_DEBUG, "Rathan Station address in the list: " MAC_FMT "\n", MAC_ARGS(station->addr));
+		//w_logf(ctx, LOG_DEBUG, "Rathan Station address in the internal list: " MAC_FMT "\n", MAC_ARGS(station->addr));
 		if (memcmp(station->addr, addr, ETH_ALEN) == 0)
 			return station;
 	}
-	w_flogf(ctx, LOG_ERR, stderr, "Unable to find sender station in the list " MAC_FMT "\n", MAC_ARGS(addr));
-	//rathan added this line to look for a matching station in the list of stations. If it doesn't find one, it queries the kernel via Netlink for a possible MAC address translation
-	// If station not found, query the kernel for MAC pair translation
-    mac_translation = kernel_search_mac_pair(addr);
-    if (mac_translation != NULL) {
-        w_logf(ctx, LOG_DEBUG, "Srija Kernel found translation for random MAC: %02x:%02x:%02x:%02x:%02x:%02x\n", MAC_ARGS(mac_translation->s_base_mac));
-        list_for_each_entry(station, &ctx->stations, list) {
-           if (memcmp(station->addr, mac_translation->s_base_mac, ETH_ALEN) == 0)
-                return station;
-    	}
-    }
+
+	//step2 : if the station is not found in the internal list, search in the mac table for a possible translation and search again in the internal list
+	entry = search_by_random_mac(addr);
+	if (entry != NULL) {
+		//log_to_file("Rathan: MAT Entry with random MAC address found.\n");
+		list_for_each_entry(station, &ctx->stations, list) {
+			if (memcmp(station->addr, entry->base_mac, ETH_ALEN) == 0)
+				return station;
+		}
+	}else{
+
+		//step3 : if the station is not found in the mac table, query the kernel for a possible translation and search again in the internal list and update the mac table
+		log_to_file("mac table not found, so ask kernel\n");
+		mac_translation = kernel_search_mac_pair(addr);
+		if (mac_translation != NULL) {
+			//w_logf(ctx, LOG_DEBUG, "Srija Kernel found translation for random MAC: %02x:%02x:%02x:%02x:%02x:%02x\n", MAC_ARGS(mac_translation->s_base_mac));
+			//log_to_file("Rathan: Kernel found translation for random MAC\n");
+			//step 3.1 : update the mac table
+			update_entry_by_base(mac_translation->s_base_mac, addr);
+			//step 3.2 : search again in the internal list
+			list_for_each_entry(station, &ctx->stations, list) {
+			if (memcmp(station->addr, mac_translation->s_base_mac, ETH_ALEN) == 0)
+					return station;
+			}
+		}
+
+	}
+	//log_to_file("NOHOPE: Station not found in the internal list, table, kernel\n");
 	return NULL;
 }
 
@@ -1384,6 +1404,7 @@ int main(int argc, char *argv[])
 		event_add(&net_ev, NULL);
 	}
 
+	log_to_file("wmediumd tool starting here\n");
 	/* init netlink */
 	if (init_netlink(&ctx) < 0)
 		return EXIT_FAILURE;
@@ -1414,10 +1435,12 @@ int main(int argc, char *argv[])
 	if (start_server == true)
 		stop_wserver();
 
+	log_to_file("wmediumd tool ending here 1\n");
 	free(ctx.sock);
 	free(ctx.cb);
 	free(ctx.intf);
 	free(ctx.per_matrix);
+	log_to_file("wmediumd tool ending here 2\n");
 
 	return EXIT_SUCCESS;
 }

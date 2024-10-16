@@ -17,6 +17,24 @@ struct mac_pair {
     // Add other fields if needed
 };
 
+// Structure to store MAC pairsßßßßß
+struct mac_table {
+    unsigned char base_mac[ETH_ALEN];
+    unsigned char random_mac[ETH_ALEN];
+    struct mac_table *next;
+};
+
+//functions to handle table operations
+void log_to_file(const char *message);
+void insert_entry(const unsigned char *base_mac, const unsigned char *random_mac);
+void update_entry_by_random(const unsigned char *random_mac, const unsigned char *new_base_mac);
+void update_entry_by_base(const unsigned char *base_mac, const unsigned char *new_random_mac);
+struct mac_table *search_by_random_mac(const unsigned char *random_mac);
+struct mac_table *search_by_base_mac(const unsigned char *base_mac);
+void cleanup_translation_table(void);
+void log_mac_translation_table(void);
+void mac_to_string(const unsigned char *mac, char *buffer, size_t buffer_size);
+
 struct mac_pair *kernel_search_mac_pair(u8 *random_mac);
 int netlink_response_handler(struct nl_msg *msg, void *arg);
 
