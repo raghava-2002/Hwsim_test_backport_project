@@ -26,7 +26,7 @@ def topology(args):
     # rts_threshold=2347 means that the RTS/CTS mechanism will be used for frames larger than 2347 bytes
     ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36',
                              position='60,60,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='user', rts_threshold=500, txpower=13)
-    sta1 = net.addStation('sta1', ip='192.168.42.2/24', position='62,60,0', passwd='123456789a', encrypt='wpa3', range=35) #2 meters away from AP
+    sta1 = net.addStation('sta1', ip='192.168.42.2/24', position='62,60,0', passwd='123456789a', encrypt='wpa3') #2 meters away from AP
     sta2 = net.addStation('sta2', ip='192.168.42.3/24', position='64.95,64.95,0', passwd='123456789a', encrypt='wpa3', range=35) #7 meters away from AP
     sta3 = net.addStation('sta3', ip='192.168.42.4/24', position='60,75,0', passwd='123456789a', encrypt='wpa3', range=35) #15 meters away from AP
     sta4 = net.addStation('sta4', ip='192.168.42.5/24', position='42.68,77.32,0', passwd='123456789a', encrypt='wpa3', range=35) #25 meters away from AP
@@ -37,10 +37,10 @@ def topology(args):
     #               position='20,60,10', passwd='123456789a', encrypt='wpa2')
 
     info("*** Configuring Propagation Model\n")
-    net.setPropagationModel(model="logDistance", exp=4)
+    #net.setPropagationModel(model="logDistance", exp=4)
     #LF: floor penetration loss factor
     # nFLOORS: number of floors
-    #net.setPropagationModel(model="ITU", nFLOORS=2, LF=20, pL=5) 
+    net.setPropagationModel(model="ITU", nFLOORS=2, LF=20) 
 
     info("*** Configuring nodes\n")
     net.configureNodes()
@@ -62,7 +62,7 @@ def topology(args):
     ap1.start([])
     info("*** Plotting network graph\n")
     # Save the plot as a PNG file
-    plt.savefig('/home/rathan/Downloads/hwsim_test/testing/mininet_wifi_topology.png', bbox_inches='tight')  # Save the figure to a file
+    plt.savefig('/home/rathan/thesis/hwsim_test/testing/topology_wifi.png', bbox_inches='tight')  # Save the figure to a file
 
     info("*** plotting heat map\n")
     # Extract the coordinates of AP and stations for plotting

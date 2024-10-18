@@ -8,7 +8,7 @@ plot_all_tests = True  # Set to False to disable
 
 # Enable or disable plotting for each scheme
 plot_no_rnd = True
-plot_kernel_time = False
+plot_kernel_time = True
 plot_ap_trigger = True
 
 # Base directory and settings

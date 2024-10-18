@@ -19,8 +19,9 @@ struct mac_pair {
 
 // Structure to store MAC pairsßßßßß
 struct mac_table {
-    unsigned char base_mac[ETH_ALEN];
-    unsigned char random_mac[ETH_ALEN];
+    unsigned char base_mac[ETH_ALEN]; //the original MAC address of the station got from the kernel
+    unsigned char random_mac[ETH_ALEN]; //the current random MAC address of the station
+    unsigned char old_rnd_mac[ETH_ALEN]; //the old random MAC address of the station (from the previous time period)
     struct mac_table *next;
 };
 

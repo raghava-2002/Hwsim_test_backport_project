@@ -182,6 +182,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
 }
 
 
+//wmediumd table handling functions and structures
 
 struct mac_table *translation_table[TABLE_SIZE] = { NULL }; // Global translation hash table
 
@@ -207,6 +208,7 @@ void insert_entry(const unsigned char *base_mac, const unsigned char *random_mac
     //log_to_file("new entry created\n");
     memcpy(new_entry->base_mac, base_mac, ETH_ALEN);
     memcpy(new_entry->random_mac, random_mac, ETH_ALEN);
+    memcpy(new_entry->old_rnd_mac, random_mac, ETH_ALEN); // Initially set old MAC to current MAC
     new_entry->next = translation_table[index];
     translation_table[index] = new_entry;
 }
@@ -216,6 +218,7 @@ void update_entry_by_base(const unsigned char *base_mac, const unsigned char *ne
     if (entry != NULL) {
         // Entry with the specified base MAC address found, update its random MAC address
         //log_to_file("entry found and updated\n");
+        memcpy(entry->old_rnd_mac, entry->random_mac, ETH_ALEN); // Save the old random MAC
         memcpy(entry->random_mac, new_random_mac, ETH_ALEN);
     } else {
         //printk(KERN_DEBUG "Rathan: MAT b Entry with base MAC address not found.\n");
@@ -226,6 +229,7 @@ void update_entry_by_base(const unsigned char *base_mac, const unsigned char *ne
     }
 }
 
+//this function is not needed or not using in the logic
 void update_entry_by_random(const unsigned char *random_mac, const unsigned char *new_base_mac) {
     struct mac_table *entry = search_by_random_mac(random_mac);
     if (entry != NULL) {
@@ -247,6 +251,18 @@ struct mac_table *search_by_random_mac(const unsigned char *random_mac) {
             if (memcmp(entry->random_mac, random_mac, ETH_ALEN) == 0) {
                 //log_to_file("entry found and returned\n");
                 //log_mac_translation_table();
+                return entry;
+            }
+            entry = entry->next;
+        }
+    }
+
+    for (index = 0; index < TABLE_SIZE; ++index) {
+        struct mac_table *entry = translation_table[index];
+        while (entry != NULL) {
+            if (memcmp(entry->old_rnd_mac, random_mac, ETH_ALEN) == 0) {
+                //log_to_file("entry found and returned\n");
+                log_mac_translation_table();
                 return entry;
             }
             entry = entry->next;
@@ -304,16 +320,17 @@ void mac_to_string(const unsigned char *mac, char *buffer, size_t buffer_size) {
 // Function to log the MAC translation table
 void log_mac_translation_table() {
     char log_entry[128]; // Adjust size if needed
-    char random_mac_str[18], base_mac_str[18];
+    char random_mac_str[18], base_mac_str[18], old_mac_str[18];
     
     for (int i = 0; i < TABLE_SIZE; i++) {
         struct mac_table *entry = translation_table[i];
         while (entry != NULL) {
             mac_to_string(entry->random_mac, random_mac_str, sizeof(random_mac_str));
             mac_to_string(entry->base_mac, base_mac_str, sizeof(base_mac_str));
+            mac_to_string(entry->old_rnd_mac, old_mac_str, sizeof(old_mac_str));
             
             // Format the entry into a log message
-            snprintf(log_entry, sizeof(log_entry), "Random MAC: %s -> Base MAC: %s\n", random_mac_str, base_mac_str);
+            snprintf(log_entry, sizeof(log_entry), "Random MAC: %s -> Base MAC: %s -> Old rnd MAC: %s\n", random_mac_str, base_mac_str, old_mac_str);
             
             // Log the entry to file
             log_to_file(log_entry);

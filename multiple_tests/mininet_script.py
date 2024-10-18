@@ -46,10 +46,10 @@ def topology(args):
     #               position='20,60,10', passwd='123456789a', encrypt='wpa2')
 
     info("*** Configuring Propagation Model\n")
-    net.setPropagationModel(model="logDistance", exp=4.1)
+    #net.setPropagationModel(model="logDistance", exp=4.1)
     #LF: floor penetration loss factor
     # nFLOORS: number of floors
-    #net.setPropagationModel(model="ITU", nFLOORS=2, LF=20, pL=5) 
+    net.setPropagationModel(model="ITU", nFLOORS=1, LF=20) 
 
     info("*** Configuring nodes\n")
     net.configureNodes()

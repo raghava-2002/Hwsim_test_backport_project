@@ -8,9 +8,9 @@ num_tests = 5  # Number of tests to run
 
 working_directory = os.getcwd()  # or use a specific path if needed
 mininet_script_path = os.path.join(working_directory, 'mininet_script.py')
-#change the path for for other schemes
+#change the path for for other schemes this is enough
 #kernel_time, no_rnd, ap_trigger
-result_base_dir = os.path.join(working_directory, 'iperf3_results', 'no_rnd')
+result_base_dir = os.path.join(working_directory, 'iperf3_results', 'ap_trigger')
 iperf_duration = 20  # Duration of iperf test in seconds
 AP_IP = "192.168.42.1"
 start_port = 5201
