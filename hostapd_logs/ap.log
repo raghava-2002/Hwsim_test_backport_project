@@ -1,78 +1,17 @@
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 67AA106E46371304
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Line 11: invalid group_mgmt_cipher: AES-128-CMAC   # Management frames encryption suite
+1 errors found in configuration file 'confs/hostapd.conf'
+Failed to set up interface with confs/hostapd.conf
+Failed to initialize interface
+Line 11: invalid group_mgmt_cipher: AES-128-CMAC   # Management frames encryption suite
+1 errors found in configuration file 'confs/hostapd.conf'
+Failed to set up interface with confs/hostapd.conf
+Failed to initialize interface
 wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 65FB35DAA0BAE5D9
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4F7D6EB1EC2F4C84
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 45E3BFD30EC42CA0
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 69D088CB10FCE7BD
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -85,7 +24,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C3B3FE3190716029
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1324C1B39439F986
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -98,71 +37,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 64EDA77DE00B4EF8
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A9F142F6DD8FC570
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: associated (aid 2)
-wlan0: AP-STA-CONNECTED 02:00:00:00:02:00
-wlan0: STA 02:00:00:00:02:00 RADIUS: starting accounting session 589420DE33F4FB73
-wlan0: STA 02:00:00:00:02:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:02:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:02:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3BC191EEC7C3CCE6
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 9B0DD29F618E0844
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6FC5EC46FB74F277
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -175,7 +50,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E3AEF5563C1BEC34
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 81D3CDDDDC2D0BD5
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -188,7 +63,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session CCAC8DC0DC71852A
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4A309B161BD2884F
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -201,23 +76,10 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 90C51DBF12ED6E04
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session DA162EC29AB4861F
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: associated (aid 2)
-wlan0: AP-STA-CONNECTED 02:00:00:00:02:00
-wlan0: STA 02:00:00:00:02:00 RADIUS: starting accounting session 5B48B7823880846F
-wlan0: STA 02:00:00:00:02:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:02:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:02:00
 wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
 wlan0: interface state ENABLED->DISABLED
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
@@ -227,41 +89,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E1E732D623646FD8
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:02:00 IEEE 802.11: associated (aid 2)
-wlan0: AP-STA-CONNECTED 02:00:00:00:02:00
-wlan0: STA 02:00:00:00:02:00 RADIUS: starting accounting session 040AFEF418A705B3
-wlan0: STA 02:00:00:00:02:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:02:00
-wlan0: STA 02:00:00:00:03:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:03:00 IEEE 802.11: associated (aid 3)
-wlan0: AP-STA-CONNECTED 02:00:00:00:03:00
-wlan0: STA 02:00:00:00:03:00 RADIUS: starting accounting session 7D0D9D693FB3C053
-wlan0: STA 02:00:00:00:03:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:03:00
-wlan0: STA 02:00:00:00:04:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:04:00 IEEE 802.11: associated (aid 4)
-wlan0: AP-STA-CONNECTED 02:00:00:00:04:00
-wlan0: STA 02:00:00:00:04:00 RADIUS: starting accounting session 4F7A0BF94E847C70
-wlan0: STA 02:00:00:00:04:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:04:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:04:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:03:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:02:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6CCDC7FEEC1FF2AC
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 0BA5005653EA5DD4
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -274,140 +102,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 533FA97B76548F19
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 55C918A75FB02FF6
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E4E209CC94BC8E38
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D56D41D69B29BA29
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2912FA7978C54DD8
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6D862E6448B43CAD
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D597EF9EAE565BA0
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 8D9A323315212C30
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3FA0B9AF30CA4242
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -420,7 +115,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session EA3C851A600FE2F1
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 526A6BF6F8D5BA68
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -430,16 +125,10 @@ wlan0: CTRL-EVENT-TERMINATING
 nl80211: deinit ifname=wlan0 disabled_11b_rates=0
 wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6EA864B57FD71AAA
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session BDD9AF024AC92DE8
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -449,16 +138,10 @@ wlan0: CTRL-EVENT-TERMINATING
 nl80211: deinit ifname=wlan0 disabled_11b_rates=0
 wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 259F7B73D84E325E
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C64C097F2A5FC4BC
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -468,6 +151,65 @@ wlan0: CTRL-EVENT-TERMINATING
 nl80211: deinit ifname=wlan0 disabled_11b_rates=0
 wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 78F4AA7ECC60C268
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session BA1F8EACDB24BD66
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 17FD856277FFF361
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6B83B82CB835C733
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session B0986B9C2EFD147A
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
@@ -477,7 +219,98 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session F659ED4CD9F4269F
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E6D3C1128D310551
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C22F9E87A78918C5
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3A90D02FF325A431
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session B5D6A97A721E6545
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session DEA06FB566203085
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7028A86CEF120EE8
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4B78A4A48D1D8C77
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 9C76BFDD01D97A11
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -499,64 +332,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1EAD9FAC70E67AE9
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session B36B49D960AE2983
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 822D96E4542E0FE3
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 9D4A98D32ABBD7C1
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 51AE3A9891FB1934
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -569,64 +345,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session B773DEFAD1348949
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session CD29FFBD8FF8F2F3
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7E7306B0A568DC7D
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2EC70DEB2C9002E7
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session EAB60D62BA1E6DAF
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -639,34 +358,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A4FB46581FD9E691
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: deauthenticated due to local deauth request
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E8F3082631BF64A8
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A2BEBE2EAA08B901
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -679,7 +371,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session CEA6C559022BABE8
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session FD6E494C77800451
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -687,14 +379,8 @@ wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
 nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
@@ -704,20 +390,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 0405410564192F0B
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session EBAC86FDBC5D5B1E
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session CFC50A0EAC653446
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -730,7 +403,26 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E81D2A2C92C8B958
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2875E826AFE2225D
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: STA 7a:e5:c3:1c:82:63 IEEE 802.11: authenticated
+wlan0: STA 7a:e5:c3:1c:82:63 IEEE 802.11: associated (aid 2)
+wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 7a:e5:c3:1c:82:63
+wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 7a:e5:c3:1c:82:63
+wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 7a:e5:c3:1c:82:63
+wlan0: AP-STA-POSSIBLE-PSK-MISMATCH 7a:e5:c3:1c:82:63
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A57A94A805BF33F6
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -743,7 +435,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 963476ED51FECA91
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7234EAF5E5A7C130
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -756,7 +448,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 8EF48DD0E6907DB1
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 74942C6E4FDCC788
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -769,34 +461,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 39E28A838A42D70F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: authenticated
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: associated (aid 2)
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: deauthenticated due to local deauth request
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: authenticated
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: associated (aid 2)
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: AP-STA-POSSIBLE-PSK-MISMATCH a2:68:27:ca:9c:f6
-wlan0: STA a2:68:27:ca:9c:f6 IEEE 802.11: deauthenticated due to local deauth request
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A376AC14DCF2B9DB
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5746110732C0CEBF
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -809,17 +474,108 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5D37C17975BBC9E7
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 62EDA973EC5AF100
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session AF107D4B4B50A035
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 591974793F9A47F4
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 0EDF7CF94803A003
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 62C8F23A17DBEA00
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 474D481266BAF18A
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 85D1FF879D23C3B3
+wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
+wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
+wlan0: interface state ENABLED->DISABLED
+wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED 
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
+wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
+wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3E0E64498622ACB0
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: STA 02:00:00:00:02:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:02:00 IEEE 802.11: associated (aid 2)
 wlan0: AP-STA-CONNECTED 02:00:00:00:02:00
-wlan0: STA 02:00:00:00:02:00 RADIUS: starting accounting session 248B62835E2F45A6
+wlan0: STA 02:00:00:00:02:00 RADIUS: starting accounting session B3BF7E28396F1576
 wlan0: STA 02:00:00:00:02:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:02:00
+wlan0: interface state ENABLED->DISABLED
 wlan0: AP-STA-DISCONNECTED 02:00:00:00:02:00
-wlan0: interface state ENABLED->DISABLED
 wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
@@ -829,15 +585,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 8DFF6FEBC76B099F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 99E8205FCF005E00
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5F5A7B67F12F2BBF
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -850,338 +598,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C03629F51F051476
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3E00446F71BEE01C
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session AEF93871EABA896F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E483DBB3E4842043
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D48EFD59C2D02067
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C377AB463565DF2E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session AA4741456AF57AC3
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4C549220629D677E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6247267C3BB9F4E5
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 90F93C149AA53585
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session FF36F4AC08F184C6
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6D93194F0A50DD8C
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 49B78D60D861AF26
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 286E5C3689D47A15
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session E1E36776F5CE96BD
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 38D5002A3FCA0DCF
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 32DCB52666C3BD75
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 6B2EEAF029BC2A1A
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4EF6BD60CC05B906
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2CA5AACAA8A94E00
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 28FD51722E90FEA0
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session DA08D41A43A1BE39
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 40DB6C55F89A6063
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5127CDE42FF76703
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 04B12EA6DB50D4A5
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7ED6763EC613E54B
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 59981858AF0F6752
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -1198,12 +615,21 @@ wlan0: interface state UNINITIALIZED->DISABLED
 wlan0: AP-DISABLED 
 wlan0: CTRL-EVENT-TERMINATING 
 hostapd_free_hapd_data: Interface wlan0 wasn't started
+Could not read interface wlan0 flags: No such device
+nl80211: Driver does not support authentication/association or connect commands
+nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Could not read interface wlan0 flags: No such device
+nl80211 driver initialization failed.
+wlan0: interface state UNINITIALIZED->DISABLED
+wlan0: AP-DISABLED 
+wlan0: CTRL-EVENT-TERMINATING 
+hostapd_free_hapd_data: Interface wlan0 wasn't started
 wlan0: interface state UNINITIALIZED->ENABLED
 wlan0: AP-ENABLED 
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 394B377C69605280
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 4688D8B5C901FC92
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -1216,7 +642,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D3DEEE0ED434D4EC
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session DF448F4502FF29BB
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -1229,7 +655,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 32E4B24CFD8BD68A
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session FCBFCBFB62D9AB68
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED
@@ -1242,566 +668,7 @@ wlan0: AP-ENABLED
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
 wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
 wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 33782458EDC888FC
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 02752636D6F78019
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D94006E8ADCA9B2E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 235F2028B18A442E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2F34D32EC1CDC7BC
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D10837EE7EECB3D1
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D88BF74C9C09844B
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 0EEBFF05C582A8CE
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session EC8949B37482B2EA
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session FEDFC75C6BDD4A09
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2A43C1C565C5D10C
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 37CFA1FF67F76E2E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 664925FCA586D098
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5784D58E41A53A14
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session BFFC17745C3C8F9E
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session CC7FD6E2F992B896
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 918BC44F39BA0BF4
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 59F582C99A5DD20D
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 2AB05E1FB1C48A4F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session F319B516462847F1
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 441860F720EDF2E1
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7782D6ACA50A1472
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 8FA1DE976D57B0CC
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7E3AE35BFB0D2416
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session BFC975F183FF2EB4
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 229521C81D8D7712
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 930DB528DC6BEDCE
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1D3B5F5B91B0FB4F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session F3B46512DB3D005A
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D97F34551F24947C
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session DB471787E11C033A
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session C7F11927E40D194F
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1779DE7E64DC4AB7
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 3A62705F5F358CC2
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 5BEB3DFF7805AF51
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 9A6800031DEAA2B8
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session B54F0C57689CEFB7
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1791B9B6E69F4E09
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A8B9F46AD94AA51B
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 7ACD93C5A71DDF61
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session BA419C918C74CF2A
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session A92C760A9C007EB2
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session D438861E95B09756
-wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
-wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
-wlan0: interface state ENABLED->DISABLED
-wlan0: AP-STA-DISCONNECTED 02:00:00:00:01:00
-wlan0: AP-DISABLED 
-wlan0: CTRL-EVENT-TERMINATING 
-nl80211: deinit ifname=wlan0 disabled_11b_rates=0
-wlan0: interface state UNINITIALIZED->ENABLED
-wlan0: AP-ENABLED 
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: authenticated
-wlan0: STA 02:00:00:00:01:00 IEEE 802.11: associated (aid 1)
-wlan0: AP-STA-CONNECTED 02:00:00:00:01:00
-wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session F4E57DEFB12627B5
+wlan0: STA 02:00:00:00:01:00 RADIUS: starting accounting session 1CF77251DBBC4EC7
 wlan0: STA 02:00:00:00:01:00 WPA: pairwise key handshake completed (RSN)
 wlan0: EAPOL-4WAY-HS-COMPLETED 02:00:00:00:01:00
 wlan0: interface state ENABLED->DISABLED

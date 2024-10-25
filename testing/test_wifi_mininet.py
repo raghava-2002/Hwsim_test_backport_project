@@ -131,7 +131,7 @@ def plot_rssi(stations, rssi_values):
 
 def dump_node_info(net):
     "Dump station information (IP and PID) to a file"
-    output_file = "/home/rathan/Downloads/hwsim_test/testing/nodes.txt"
+    output_file = "/home/rathan/thesis/hwsim_test/testing/nodes.txt"
 
     with open(output_file, "w") as f:
         # Iterate over all nodes (stations and AP)

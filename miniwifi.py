@@ -21,7 +21,7 @@ def topology(args):
     # mode b = 2.4GHz channel 1
     # modes are a, b, g, n
     ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36', ht_cap='HT20',
-                             position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='user')
+                             position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='kernel')
     sta1 = net.addStation('sta1', ip='192.168.42.2/24',
                    position='100,120,0', passwd='123456789a', encrypt='wpa3', ht_cap='HT20')
     #net.addStation('sta2', mac='00:00:00:00:00:03', ip='10.0.0.2/8',
@@ -38,6 +38,16 @@ def topology(args):
     net.addLink(sta1, ap1)
 
     ap1.setIP('192.168.42.1/24', intf='ap1-wlan1')
+
+    # Add the following commands after creating the AP and configuring the IPs
+    ap1.cmd('brctl addbr br0')  # Create the bridge
+    ap1.cmd('brctl addif br0 ap1-wlan1')  # Add the wireless interface to the bridge
+    ap1.cmd('ifconfig br0 192.168.42.1 netmask 255.255.255.0 up')  # Assign IP to the bridge
+    ap1.cmd('ifconfig ap1-wlan1 0.0.0.0')  # Clear the IP from the wireless interface
+    ap1.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')  # Enable IP forwarding
+
+    # Continue with the rest of your script
+
 
     if '-p' not in args:
         net.plotGraph(max_x=250, max_y=250)

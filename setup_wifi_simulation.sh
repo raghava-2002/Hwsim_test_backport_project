@@ -59,7 +59,7 @@ count_namespaces() {
 start_wmediumd() {
   echo "Starting wmediumd with custom configuration..."
   # Replace this with the actual path to your wmediumd config file (2node.cfg or dynamically generated one)
-  /home/rathan/Downloads/hwsim_test/wmediumd/wmediumd/wmediumd -c /home/rathan/Downloads/hwsim_test/wmediumd.cfg > /home/rathan/Downloads/hwsim_test/wmedium.log &
+  sudo /usr/bin/wmediumd -c /home/rathan/thesis/hwsim_test/wmediumd.cfg > /home/rathan/thesis/hwsim_test/wmedium.log &
 }
 
 

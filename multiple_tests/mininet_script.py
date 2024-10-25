@@ -18,14 +18,15 @@ def topology(args):
     "Create a network." 
     #, noise_th=-91, fading_cof=3
     net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference)
+    #net = Mininet_wifi()
 
     info("*** Creating nodes\n")
     # mode a = 5GHz, channel 36 (Internal signal range is 35mts)
     # mode b = 2.4GHz channel 1
     # modes are a, b, g, n
     # rts_threshold=2347 means that the RTS/CTS mechanism will be used for frames larger than 2347 bytes
-    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36',
-                             position='60,60,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='user', rts_threshold=500, txpower=13)
+    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36', ip='192.168.42.1/24',
+                             position='60,60,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', ieee80211w='2', failMode="standalone", datapath='kernel', rts_threshold=500, txpower=13)
     # Stations configuration with increasing distance and height from the AP
     sta1 = net.addStation('sta1', ip='192.168.42.2/24', position='62,60,0.5', passwd='123456789a', encrypt='wpa3', range=35)  # 2 meters east, 0.5 meters up
     sta2 = net.addStation('sta2', ip='192.168.42.3/24', position='60,64,1', passwd='123456789a', encrypt='wpa3', range=35)  # 4 meters north, 1 meter up
@@ -54,6 +55,14 @@ def topology(args):
     info("*** Configuring nodes\n")
     net.configureNodes()
     info("*** Associating Stations\n")
+    ap1.setIP('192.168.42.1/24', intf='ap1-wlan1')
+        # Add the following commands after creating the AP and configuring the IPs
+    ap1.cmd('brctl addbr br0')  # Create the bridge
+    ap1.cmd('brctl addif br0 ap1-wlan1')  # Add the wireless interface to the bridge
+    ap1.cmd('ifconfig br0 192.168.42.1 netmask 255.255.255.0 up')  # Assign IP to the bridge
+    ap1.cmd('ifconfig ap1-wlan1 0.0.0.0')  # Clear the IP from the wireless interface
+    ap1.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')  # Enable IP forwarding
+
     net.addLink(sta1, ap1)
     net.addLink(sta2, ap1)
     net.addLink(sta3, ap1)
@@ -66,7 +75,7 @@ def topology(args):
     net.addLink(sta10, ap1)
     net.addLink(sta11, ap1)
 
-    ap1.setIP('192.168.42.1/24', intf='ap1-wlan1')
+  
 
     if '-p' not in args:
         net.plotGraph(max_x=120, max_y=120)

@@ -11,7 +11,7 @@ plot_scheme_2 = True
 plot_scheme_3 = True
 
 # Base directories for different schemes
-base_dir = "/home/rathan/Downloads/hwsim_test/testing/iperf3_results"
+base_dir = "/home/rathan/thesis/hwsim_test/testing/iperf3_results"
 
 # Function to load iperf3 results from a scheme directory
 def load_iperf3_results(scheme_dir, test_num):

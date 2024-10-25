@@ -116,6 +116,7 @@ enum {
 
 #include "list.h"
 #include "ieee80211.h"
+#include <glib.h>
 
 typedef uint8_t u8;
 typedef uint32_t u32;
@@ -201,6 +202,8 @@ struct wmediumd {
 	int (*get_fading_signal)(struct wmediumd *);
 
 	u8 log_lvl;
+	GHashTable *station_table;
+    GHashTable *mac_translation_table;
 };
 
 struct hwsim_tx_rate {

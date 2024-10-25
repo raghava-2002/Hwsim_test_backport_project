@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 plot_all_tests = True  # Set to False to disable
 
 # Enable or disable plotting for each scheme
-plot_no_rnd = True
+plot_no_rnd = False
 plot_kernel_time = True
 plot_ap_trigger = True
 
@@ -32,11 +32,14 @@ def load_iperf3_results(test_path):
             with open(f"{test_path}/tcp/sta{i}_iperf3.json", "r") as f:
                 data = json.load(f)
                 retransmit_count = data['end']['sum_sent']['retransmits']
+                #retransmit_count = data.get('end', {}).get('sum_sent', {}).get('retransmits', 0)
                 throughput_tcp = data['end']['sum_received']['bits_per_second'] / 1e6
                 tcp_retransmissions.append(retransmit_count)
                 throughput_values_tcp.append(throughput_tcp)
         except FileNotFoundError:
             print(f"File not found: {test_path}/tcp/sta{i}_iperf3.json")
+        except KeyError as e:
+            print(f"Key error in file {test_path}/tcp/sta{i}_iperf3.json: {e}")
 
     # Load UDP results
     for i in range(1, 12):
@@ -51,6 +54,8 @@ def load_iperf3_results(test_path):
                 throughput_values_udp.append(throughput_udp)
         except FileNotFoundError:
             print(f"File not found: {test_path}/udp/sta{i}_iperf3.json")
+        except KeyError as e:
+            print(f"Key error in file {test_path}/udp/sta{i}_iperf3.json: {e}")
 
     return tcp_retransmissions, throughput_values_tcp, udp_packet_loss_values, udp_jitter_values, throughput_values_udp
 

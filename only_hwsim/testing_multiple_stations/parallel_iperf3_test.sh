@@ -10,14 +10,14 @@ count_namespaces() {
 AP_IP="192.168.42.1"
 
 # Duration of the iperf3 test in seconds
-DURATION=60
+DURATION=20
 
 # Starting port for iperf3 server instances
 START_PORT=5201
 
 # Output directory for logs
 # Change the folder for each scheme
-LOG_DIR="/home/rathan/Downloads/hwsim_test/test_data/scheme_1"
+LOG_DIR="/home/rathan/thesis/hwsim_test/new_server/scheme_1"
 mkdir -p $LOG_DIR/tcp
 mkdir -p $LOG_DIR/udp
 
@@ -31,10 +31,10 @@ for i in $(seq 1 $active_namespaces); do
     port=$((START_PORT + i - 1))
     echo "Running iperf3 test in namespace: $ns_name on port $port"
 
-    iperf3 -s -p $port &
+    sudo ip netns exec ap iperf3 -s -p $port &
     
     # Run iperf3 in the background and log the output tcp
-    sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -t $DURATION -J > $LOG_DIR/tcp/$ns_name.json &
+    sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -t $DURATION -J > $LOG_DIR/tcp/$ns_name.json 
 
     # Run iperf3 in the background and log the output udp
     #sudo ip netns exec $ns_name iperf3 -c $AP_IP -p $port -u -b 50M -t $DURATION -J > $LOG_DIR/udp/$ns_name.json &

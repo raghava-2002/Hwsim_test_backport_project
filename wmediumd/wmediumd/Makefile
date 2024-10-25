@@ -46,6 +46,10 @@ LDFLAGS += $(shell $(PKG_CONFIG) --libs $(NLLIBNAME))
 CFLAGS += $(shell $(PKG_CONFIG) --cflags $(NLLIBNAME))
 
 CFLAGS+=-DVERSION_STR=$(VERSION_STR)
+# Adding GLib flags using pkg-config
+CFLAGS += $(shell pkg-config --cflags glib-2.0)
+LDFLAGS += $(shell pkg-config --libs glib-2.0)
+
 LDFLAGS+=-lconfig -lpthread
 OBJECTS=wmediumd.o wserver.o config.o per.o wmediumd_dynamic.o wserver_messages.o wserver_messages_network.o wmd_mac_randomization.o
 

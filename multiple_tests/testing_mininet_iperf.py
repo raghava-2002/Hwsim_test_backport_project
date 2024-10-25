@@ -2,15 +2,17 @@ import os
 import subprocess
 import time
 from datetime import datetime
+import re
 
 # Configuration
-num_tests = 5  # Number of tests to run
+num_tests = 60  # Number of tests to run
 
 working_directory = os.getcwd()  # or use a specific path if needed
 mininet_script_path = os.path.join(working_directory, 'mininet_script.py')
 #change the path for for other schemes this is enough
 #kernel_time, no_rnd, ap_trigger
-result_base_dir = os.path.join(working_directory, 'iperf3_results', 'ap_trigger')
+#, 'testing_more'
+result_base_dir = os.path.join(working_directory, 'iperf3_results', 'no_rnd','testing_more')
 iperf_duration = 20  # Duration of iperf test in seconds
 AP_IP = "192.168.42.1"
 start_port = 5201
@@ -29,13 +31,27 @@ def get_pid(station_name):
                 return line.split("pid=")[1].strip()
     return None
 
+# Function to extract the PID from nodes.txt using regular expressions
+#def get_pid(station_name, nodes_file='nodes.txt'):
+    # Regular expression to capture 'pid=<digits>' pattern
+#    pid_pattern = re.compile(r'pid=(\d+)')
+    
+#    with open(nodes_file, 'r') as file:
+#        for line in file:
+#            if station_name in line:
+#                # Search for the PID using the regular expression
+#                match = pid_pattern.search(line)
+#                if match:
+#                    return match.group(1)  # Return the captured digits (the PID)
+ #   return None
+
 # Function to run iperf3 test for a station (TCP/UDP)
 def run_iperf3_test(station_name, station_pid, port, test_folder, protocol):
     if protocol == "tcp":
         output_file = f"{test_folder}/tcp/{station_name}_iperf3.json"
         print(f"Running TCP iperf3 test for {station_name} (PID: {station_pid}) on port {port}")
         subprocess.run([
-            'sudo', 'mnexec', '-a', station_pid, 'iperf3', '-c', AP_IP, '-p', str(port), 
+            'sudo', 'mnexec', '-a', station_pid, 'iperf3', '-c', AP_IP, '-p', str(port),
             '-t', str(iperf_duration), '-J'
         ], stdout=open(output_file, 'w'))
     elif protocol == "udp":

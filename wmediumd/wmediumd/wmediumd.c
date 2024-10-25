@@ -324,7 +324,7 @@ static struct station *get_station_by_addr(struct wmediumd *ctx, u8 *addr)
 	}else{
 
 		//step3 : if the station is not found in the mac table, query the kernel for a possible translation and search again in the internal list and update the mac table
-		log_to_file("mac table not found, so ask kernel\n");
+		//log_to_file("mac table not found, so ask kernel\n");
 		mac_translation = kernel_search_mac_pair(addr);
 		if (mac_translation != NULL) {
 			//w_logf(ctx, LOG_DEBUG, "Srija Kernel found translation for random MAC: %02x:%02x:%02x:%02x:%02x:%02x\n", MAC_ARGS(mac_translation->s_base_mac));
@@ -342,6 +342,49 @@ static struct station *get_station_by_addr(struct wmediumd *ctx, u8 *addr)
 	//log_to_file("NOHOPE: Station not found in the internal list, table, kernel\n");
 	return NULL;
 }
+
+/* 
+//new function to get station by addr
+static struct station *get_station_by_addr(struct wmediumd *ctx, u8 *addr) {
+    struct station *station;
+    struct mac_pair *mac_translation;
+    struct mac_table *entry;
+
+    // Check if the station is in the hash table
+    station = g_hash_table_lookup(ctx->station_table, addr);
+    if (station) {
+		log_to_file("Station found in the hash table\n");
+        return station;
+    }
+
+    // Check if the random MAC has a base MAC translation
+    entry = g_hash_table_lookup(ctx->mac_translation_table, addr);
+    if (entry) {
+        // Find the station with the translated base MAC
+		log_to_file("Random MAC found in the translation hash table\n");
+        station = g_hash_table_lookup(ctx->station_table, entry->base_mac);
+        if (station) {
+            return station;
+        }
+    }
+
+    // Query the kernel only if not found in the hash tables
+    mac_translation = kernel_search_mac_pair(addr);
+    if (mac_translation) {
+        // Update the translation table with the found pair
+        g_hash_table_insert(ctx->mac_translation_table, addr, mac_translation);
+		log_to_file("Kernel found translation for random MAC sent to hash table\n");
+        // Find the station with the translated base MAC
+        station = g_hash_table_lookup(ctx->station_table, mac_translation->s_base_mac);
+        if (station) {
+            return station;
+        }
+    }
+
+    // Station not found
+    return NULL;
+}
+ */
 
 void detect_mediums(struct wmediumd *ctx, struct station *src, struct station *dest) {
     int medium_id;
@@ -1390,6 +1433,10 @@ int main(int argc, char *argv[])
 
 		w_logf(&ctx, LOG_NOTICE, "Input configuration file: %s\n", config_file);
 	}
+
+	// Initializing hash tables for stations and MAC translations
+    ctx.station_table = g_hash_table_new_full(g_int_hash, g_int_equal, NULL, NULL);
+    ctx.mac_translation_table = g_hash_table_new_full(g_int_hash, g_int_equal, NULL, NULL);
 	INIT_LIST_HEAD(&ctx.stations);
 	if (load_config(&ctx, config_file, per_file, full_dynamic))
 		return EXIT_FAILURE;

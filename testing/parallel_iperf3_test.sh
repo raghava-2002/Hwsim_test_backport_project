@@ -20,7 +20,7 @@ NUM_TESTS=1  # Change this value to increase the number of tests
 #scheme 2 is Kernel timebased mac randomisation
 #scheme 3 is Ap initiated mac randomisation
 # Main output directory for JSON results
-LOG_DIR="/home/rathan/Downloads/hwsim_test/testing/iperf3_results/scheme_3"
+LOG_DIR="/home/rathan/thesis/hwsim_test/testing/iperf3_results/scheme_3"
 mkdir -p $LOG_DIR
 
 # Function to extract the PID from nodes.txt

@@ -47,7 +47,7 @@ int netlink_response_handler(struct nl_msg *msg, void *arg) {
     // Extract the base MAC address from the received message
     memcpy(response->s_base_mac, raw_data, ETH_ALEN);
 
-    // Log the received MAC for debugging
+    /* // Log the received MAC for debugging
     snprintf(log_message, sizeof(log_message),
              "Extracted base MAC from kernel: %02x:%02x:%02x:%02x:%02x:%02x\n",
              response->s_base_mac[0], response->s_base_mac[1], response->s_base_mac[2],
@@ -57,7 +57,7 @@ int netlink_response_handler(struct nl_msg *msg, void *arg) {
     // Log the sequence number in the response
     snprintf(log_message, sizeof(log_message),
              "Received message with seq_num: %u\n", nlh->nlmsg_seq);
-    //log_to_file(log_message);
+    log_to_file(log_message); */
 
     return NL_OK;
 }
@@ -71,7 +71,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
     int ret;
     struct nl_cb *cb;
 
-    log_to_file("Inside Starting MAC search in kernel\n");
+    //log_to_file("Inside Starting MAC search in kernel\n");
     if (!response) {
         log_to_file("Error allocating memory for MAC response\n");
         return NULL;
@@ -95,11 +95,11 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
     }
 
     // Step 3: Log the random MAC address before sending
-    snprintf(mac_log_message, sizeof(mac_log_message),
+    /* snprintf(mac_log_message, sizeof(mac_log_message),
              "Sending random MAC to kernel: %02x:%02x:%02x:%02x:%02x:%02x\n",
              random_mac[0], random_mac[1], random_mac[2],
              random_mac[3], random_mac[4], random_mac[5]);
-    log_to_file(mac_log_message);
+    log_to_file(mac_log_message); */
 
     // Step 4: Create a Netlink message to the kernel
     msg = nlmsg_alloc();
@@ -114,7 +114,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
     genlmsg_put(msg, NL_AUTO_PORT, ++seq_num, 0, 0, 0, NETLINK_USER, 1);
 
     // Log the sequence number
-    snprintf(mac_log_message, sizeof(mac_log_message), "Netlink message sent to kernel with seq_num: %u\n", seq_num);
+    //snprintf(mac_log_message, sizeof(mac_log_message), "Netlink message sent to kernel with seq_num: %u\n", seq_num);
     //log_to_file(mac_log_message);
 
     ret = nla_put(msg, 1, ETH_ALEN, random_mac);  // Assuming attribute 1 is the MAC address
@@ -135,7 +135,7 @@ struct mac_pair *kernel_search_mac_pair(u8 *random_mac) {
         free(response);
         return NULL;
     } else {
-        log_to_file("Netlink message sent to kernel successfully\n");
+        //log_to_file("Netlink message sent to kernel successfully\n");
     }
 
     // Step 7: Set up callback
@@ -262,7 +262,7 @@ struct mac_table *search_by_random_mac(const unsigned char *random_mac) {
         while (entry != NULL) {
             if (memcmp(entry->old_rnd_mac, random_mac, ETH_ALEN) == 0) {
                 //log_to_file("entry found and returned\n");
-                log_mac_translation_table();
+                //log_mac_translation_table();
                 return entry;
             }
             entry = entry->next;
