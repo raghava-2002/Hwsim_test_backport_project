@@ -17,7 +17,7 @@ static uint32_t seq_num = 0;
 
 // Function to log messages to /home/rathan/Downloads/hwsim_test/final_test.log
 void log_to_file(const char *message) {
-    int fd = open("/home/rathan/thesis/hwsim_test/wmediumd/rathan_wmd_rnd.log", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    int fd = open("/tmp/rathan_wmd_rnd.log", O_WRONLY | O_CREAT | O_APPEND, 0644);
     if (fd < 0) {
         perror("Error opening rathan_wmd_rnd.log");
         return;

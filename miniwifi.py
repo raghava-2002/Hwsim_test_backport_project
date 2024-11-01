@@ -20,10 +20,10 @@ def topology(args):
     # mode a = 5GHz, channel 36
     # mode b = 2.4GHz channel 1
     # modes are a, b, g, n
-    ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36', ht_cap='HT20',
-                             position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='kernel')
-    sta1 = net.addStation('sta1', ip='192.168.42.2/24',
-                   position='100,120,0', passwd='123456789a', encrypt='wpa3', ht_cap='HT20')
+    #ap1 = net.addAccessPoint('ap1', ssid='new-ssid', mode='a', channel='36', ht_cap='HT20', rts='500',
+    #                         position='105,130,0',passwd='123456789a', encrypt='wpa3', rsn_pairwise='CCMP', failMode="standalone", datapath='kernel')
+    ap1 = net.addAccessPoint('ap1', position='105,130,0', hostapd_file='/media/sf_rathan-dataset/msc_thesis/hwsim_test/confs/hostapd.conf')
+    sta1 = net.addStation('sta1', ip='192.168.42.2/24', position='100,120,0', wpa_supplicant_file='/media/sf_rathan-dataset/msc_thesis/hwsim_test/confs/wpa_supplicant.conf')
     #net.addStation('sta2', mac='00:00:00:00:00:03', ip='10.0.0.2/8',
     #               position='20,50,0', passwd='123456789a', encrypt='wpa2')
     #net.addStation('sta3', mac='00:00:00:00:00:04', ip='10.0.0.3/8',
@@ -47,6 +47,9 @@ def topology(args):
     ap1.cmd('echo 1 > /proc/sys/net/ipv4/ip_forward')  # Enable IP forwarding
 
     # Continue with the rest of your script
+    # Apply RTS setting manually
+    sta1.cmd('iwconfig sta1-wlan0 rts 500')
+    ap1.cmd('iwconfig ap1-wlan1 rts 500')
 
 
     if '-p' not in args:

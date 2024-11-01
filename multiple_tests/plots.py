@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Toggle for plotting all individual tests in light color
-plot_all_tests = True  # Set to False to disable
+plot_all_tests = False  # Set to False to disable
 
 # Enable or disable plotting for each scheme
-plot_no_rnd = False
+plot_no_rnd = True
 plot_kernel_time = True
 plot_ap_trigger = True
 

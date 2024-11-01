@@ -5,14 +5,14 @@ from datetime import datetime
 import re
 
 # Configuration
-num_tests = 60  # Number of tests to run
+num_tests = 10  # Number of tests to run
 
 working_directory = os.getcwd()  # or use a specific path if needed
 mininet_script_path = os.path.join(working_directory, 'mininet_script.py')
 #change the path for for other schemes this is enough
 #kernel_time, no_rnd, ap_trigger
-#, 'testing_more'
-result_base_dir = os.path.join(working_directory, 'iperf3_results', 'no_rnd','testing_more')
+#, 'testing_more', 'new_testing', 'only_tcp'
+result_base_dir = os.path.join(working_directory, 'iperf3_results', 'ap_trigger','only_tcp')
 iperf_duration = 20  # Duration of iperf test in seconds
 AP_IP = "192.168.42.1"
 start_port = 5201
@@ -107,13 +107,13 @@ def run_test(test_num):
     time.sleep(2)  # Ensure tests are completed
 
     # Run all UDP tests
-    print(f"Running all UDP tests for Test {test_num}...")
-    for i in range(1, 12):
-        station_name = f"sta{i}"
-        port = start_port + (i - 1)
-        station_pid = get_pid(station_name)
-        if station_pid:
-            run_iperf3_test(station_name, station_pid, port, test_folder, "udp")
+    #print(f"Running all UDP tests for Test {test_num}...")
+    #for i in range(1, 12):
+    #    station_name = f"sta{i}"
+    #    port = start_port + (i - 1)
+    #    station_pid = get_pid(station_name)
+    #    if station_pid:
+    #        run_iperf3_test(station_name, station_pid, port, test_folder, "udp")
 
     # Terminate Mininet process
     print(f"Terminating Mininet for test {test_num}...")

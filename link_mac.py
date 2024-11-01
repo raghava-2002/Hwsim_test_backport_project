@@ -172,5 +172,5 @@ def main(pcap_file, time_threshold=7):
 
 if __name__ == "__main__":
     # Provide the path to the .pcap file
-    pcap_file = '/home/rathan/Downloads/pcap_files/time_drift_01.pcap'  # Update with your pcap file path
+    pcap_file = '/media/sf_rathan-dataset/pcap_files/linking/test_1.pcap'  # Update with your pcap file path
     main(pcap_file)
