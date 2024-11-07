@@ -20,7 +20,8 @@ working_directory = os.getcwd()
 base_dir = os.path.join(working_directory, 'iperf3_results')
 
 # Distance from AP for each station
-distances = [2, 4, 7, 10, 13, 18, 21, 25, 28, 31, 35]
+#distances = [2, 4, 7, 10, 13, 18, 21, 25, 28, 31, 35]
+distances = [1, 8.14, 15.32, 22.517, 29.70, 36.87, 44.06, 51.24, 58.24, 65.62, 72.79]
 
 # Function to load iperf3 results from a scheme directory for a specific test
 def load_iperf3_results(test_path):
@@ -106,8 +107,8 @@ def plot_graph(x_values, y_values_dict, ylabel, title, filename, individual_resu
     plt.xlabel('Distance from AP (meters)')
     plt.ylabel(ylabel)
     plt.title(title)
-    plt.xlim(0, 40)
-    plt.ylim(0)
+    plt.xlim(0, max(x_values) + 5)
+    plt.ylim(0, max([max(values['y']) for values in y_values_dict.values()]) + 0.21)
     plt.grid(True)
     plt.legend()
     plt.savefig(filename)

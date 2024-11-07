@@ -28,23 +28,31 @@ throughput_kbps = throughput_data * 125
 # Plot throughput heatmap
 plt.figure(figsize=(10, 8))
 plt.imshow(throughput_kbps, cmap="YlGnBu", aspect="auto")
-plt.colorbar(label="Throughput (KBps)")
-plt.title("Heatmap of Throughput Between Stations (KBps)")
+cbar = plt.colorbar()
+cbar.set_label("Throughput (KBps)", fontsize=16)  # Set label with increased font size
+cbar.ax.tick_params(labelsize=14)  # Increase font size for color bar ticks
+plt.title("Heatmap of Throughput Between Stations (KBps)", fontsize=16)
 plt.xticks(ticks=np.arange(len(stations)), labels=stations, rotation=45)
 plt.yticks(ticks=np.arange(len(stations)), labels=stations)
-plt.xlabel("Receiving Stations")
-plt.ylabel("Transmitting Stations")
-plt.savefig("throughput_heatmap_kbps.png")
+plt.xlabel("Receiving Stations", fontsize=16)
+plt.ylabel("Transmitting Stations", fontsize=16)
+plt.xticks(fontsize=14)  # Increase font size for x-axis tick labels
+plt.yticks(fontsize=14)  # Increase font size for y-axis tick labels
+plt.savefig("throughput_heatmap_kbps.pdf", format="pdf", bbox_inches="tight")
 plt.close()
 
 # Plot retransmissions heatmap
 plt.figure(figsize=(10, 8))
 plt.imshow(retransmissions_data, cmap="YlOrRd", aspect="auto")
-plt.colorbar(label="Retransmissions")
-plt.title("Heatmap of Retransmissions Between Stations")
+cbar = plt.colorbar()
+cbar.set_label("Retransmissions", fontsize=16)
+cbar.ax.tick_params(labelsize=14)  # Increase font size for color bar ticks
+plt.title("Heatmap of Retransmissions Between Stations", fontsize=16)
 plt.xticks(ticks=np.arange(len(stations)), labels=stations, rotation=45)
 plt.yticks(ticks=np.arange(len(stations)), labels=stations)
-plt.xlabel("Receiving Stations")
-plt.ylabel("Transmitting Stations")
-plt.savefig("retransmissions_heatmap.png")
+plt.xlabel("Receiving Stations", fontsize=16)
+plt.ylabel("Transmitting Stations", fontsize=16)
+plt.xticks(fontsize=14)  # Increase font size for x-axis tick labels
+plt.yticks(fontsize=14)  # Increase font size for y-axis tick labels
+plt.savefig("retransmissions_heatmap.pdf", format="pdf", bbox_inches="tight")
 plt.close()

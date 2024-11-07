@@ -1,0 +1,15 @@
+
+only hwsim with mode n with 40Mhz channel width is working with the following configuration 5Ghz band with 40Mhz channel width
+
+
+root@rathan-VirtualBox:/media/sf_rathan-dataset/msc_thesis/hwsim_test/multiple_tests# sudo iperf -c 192.168.42.1
+------------------------------------------------------------
+Client connecting to 192.168.42.1, TCP port 5001
+TCP window size:  170 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.42.2 port 45866 connected with 192.168.42.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   565 MBytes   474 Mbits/sec
+
+
+

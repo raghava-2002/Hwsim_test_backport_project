@@ -5,14 +5,14 @@ from datetime import datetime
 import re
 
 # Configuration
-num_tests = 10  # Number of tests to run
+num_tests = 1  # Number of tests to run
 
 working_directory = os.getcwd()  # or use a specific path if needed
-mininet_script_path = os.path.join(working_directory, 'mininet_script.py')
+mininet_script_path = os.path.join(working_directory, 'no_wmd.py')
 #change the path for for other schemes this is enough
 #kernel_time, no_rnd, ap_trigger
 #, 'testing_more', 'new_testing', 'only_tcp'
-result_base_dir = os.path.join(working_directory, 'iperf3_results', 'ap_trigger','only_tcp')
+result_base_dir = os.path.join(working_directory, 'iperf3_results', 'no_rnd','mode_n')
 iperf_duration = 20  # Duration of iperf test in seconds
 AP_IP = "192.168.42.1"
 start_port = 5201
