@@ -536,3 +536,13 @@ wlan1: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
 wlan1: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=US
 wlan1: WPA: Key negotiation completed with 02:00:00:00:00:00 [PTK=CCMP GTK=CCMP]
 wlan1: CTRL-EVENT-CONNECTED - Connection to 02:00:00:00:00:00 completed [id=0 id_str=]
+p2p-wlan1: CTRL-EVENT-DSCP-POLICY clear_all
+p2p-wlan1: CTRL-EVENT-DSCP-POLICY clear_all
+nl80211: deinit ifname=p2p-wlan1 disabled_11b_rates=0
+p2p-wlan1: CTRL-EVENT-TERMINATING 
+wlan1: CTRL-EVENT-DISCONNECTED bssid=02:00:00:00:00:00 reason=3 locally_generated=1
+wlan1: CTRL-EVENT-DSCP-POLICY clear_all
+wlan1: PMKSA-CACHE-REMOVED 02:00:00:00:00:00 0
+wlan1: CTRL-EVENT-DSCP-POLICY clear_all
+nl80211: deinit ifname=wlan1 disabled_11b_rates=0
+wlan1: CTRL-EVENT-TERMINATING 

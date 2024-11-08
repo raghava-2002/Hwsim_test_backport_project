@@ -1,43 +1,11 @@
 import re
+from collections import defaultdict
+import matplotlib.pyplot as plt
+import networkx as nx
+import matplotlib.colors as mcolors
 
-# Function to check linking accuracy based on prepared kernel log mappings
-def check_linking_accuracy(linked_macs, kernel_mac_mapping):
-    """
-    Checks if each linked MAC pair has the same base MAC in the kernel log mapping.
-    """
-    correct_links = 0
-    incorrect_links = []
-
-    for old_mac, new_mac, _ in linked_macs:  # We ignore the time difference here
-        found_match = False
-
-        # Check if both old_mac and new_mac are within the same list in the kernel_mac_mapping dictionary
-        for base_mac, random_macs in kernel_mac_mapping.items():
-            if old_mac in random_macs and new_mac in random_macs:
-                correct_links += 1
-                found_match = True
-                break
-
-        # If no matching base MAC found for both linked MACs, mark as incorrect
-        if not found_match:
-            incorrect_links.append((old_mac, new_mac))
-
-    # Print results
-    print(f"Total Correct Links: {correct_links}")
-    print(f"Total Incorrect Links: {len(incorrect_links)}\n")
-
-    # Display incorrect links if any
-    if incorrect_links:
-        print("Incorrect Links:")
-        for old_mac, new_mac in incorrect_links:
-            print(f"Linked Old MAC: {old_mac} -> New MAC: {new_mac}")
-
-    return correct_links, incorrect_links
-
-
-
-# Parse the kernel log to create the kernel_mac_mapping dictionary
-kernel_log = """
+# Sample data as a multi-line string
+data = """
 [104490.655846] Ap: random MAC: ca:7a:fd:c9:77:fd base mac: 02:00:00:00:00:00
 [104490.655886] Ap: random MAC: 0e:b7:ec:4f:61:de base mac: 02:00:00:00:01:00
 [104490.655892] Ap: random MAC: d6:3a:e4:c6:8f:cb base mac: 02:00:00:00:02:00
@@ -139,41 +107,37 @@ kernel_log = """
 [104610.654693] Ap: random MAC: 06:84:82:0d:fe:4b base mac: 02:00:00:00:0a:00
 """
 
+# Dictionary to store sets of MAC address transitions for each base MAC
+mac_sets = defaultdict(set)
 
+# Regex pattern to extract random and base MAC addresses
+pattern = re.compile(r"random MAC: ([\da-f:]+) base mac: ([\da-f:]+)")
 
-# Initialize the dictionary
-kernel_mac_mapping = {}
-
-# Regular expression to match the log lines
-log_pattern = re.compile(r'Ap: random MAC: ([0-9a-f:]+) base mac: ([0-9a-f:]+)')
-
-# Process each line in the kernel log
-for line in kernel_log.strip().split('\n'):
-    match = log_pattern.search(line)
+# Parse the data and populate mac_sets
+#for line in data.strip().splitlines():
+#    match = pattern.search(line)
+#    if match:
+#         random_mac, base_mac = match.groups()
+#        mac_sets[base_mac].add(random_mac)
+#
+# Parse the data and populate mac_sets while maintaining order
+for line in data.strip().splitlines():
+    match = pattern.search(line)
     if match:
         random_mac, base_mac = match.groups()
-        if base_mac not in kernel_mac_mapping:
-            kernel_mac_mapping[base_mac] = []
-        kernel_mac_mapping[base_mac].append(random_mac)
+        if base_mac not in mac_sets:
+            mac_sets[base_mac] = []  # Initialize as a list to preserve order
+        mac_sets[base_mac].append(random_mac)
 
-# Example dictionary for kernel log (base MAC as key, list of random MACs as value)
-#print(kernel_mac_mapping)
 
-# Function to extract linked MAC pairs from the linking log
-def extract_linked_macs(log):
-    """
-    Extracts linked MAC pairs from the given log.
-    """
-    linking_pattern = re.compile(r'Linked Old MAC: ([0-9a-f:]+) -> New MAC: ([0-9a-f:]+) with time diff: ([0-9.]+) seconds')
-    linked_macs = []
+# Print the sets
+for base_mac, random_macs in mac_sets.items():
+    print(f"Base MAC: {base_mac}")
+    print("Random MACs:")
+    for random_mac in random_macs:
+        print(f"  - {random_mac}")
+    print()
 
-    for line in log.strip().split('\n'):
-        match = linking_pattern.search(line)
-        if match:
-            old_mac, new_mac, time_diff = match.groups()
-            linked_macs.append((old_mac, new_mac, float(time_diff)))
-
-    return linked_macs
 
 # Example linking log
 linking_log = """
@@ -276,12 +240,97 @@ Linked Old MAC: 02:f4:f8:7f:a8:bb -> New MAC: e2:1b:93:3a:b8:31 with time diff: 
 Linked Old MAC: 62:8b:8f:17:05:6f -> New MAC: 1e:f4:0c:2d:a6:51 with time diff: 0.030668 seconds
 """
 
-# Extract linked MAC pairs from the linking log
-linked_macs = extract_linked_macs(linking_log)
 
-# Example list of linked MAC pairs (modify as needed)
-#print(linked_macs)
 
-# Run the check
-correct_links, incorrect_links = check_linking_accuracy(linked_macs, kernel_mac_mapping)
+# Create a graph without edges
+G = nx.Graph()
 
+# Add nodes to the graph
+for base_mac, random_macs in mac_sets.items():
+    # Add the base MAC node
+    G.add_node(base_mac)
+    
+    # Add the random MACs as nodes
+    for random_mac in random_macs:
+        G.add_node(random_mac)
+        # For visualization purpose, position the random MAC nodes adjacent to the base MAC
+        #G.add_edge(base_mac, random_mac)  # Adding an edge to keep nodes grouped, but it won't be shown
+
+
+# Parse the linking log and add edges
+pattern = re.compile(r"Linked Old MAC: ([0-9a-f:]+) -> New MAC: ([0-9a-f:]+)")
+matches = pattern.findall(linking_log)
+# Separate edges by color
+green_edges = []
+red_edges = []
+for old_mac, new_mac in matches:
+    G.add_edge(old_mac, new_mac)
+    # Check if both old_mac and new_mac belong to the same base_mac in mac_sets
+    same_set = False
+    for base_mac, random_macs in mac_sets.items():
+        if old_mac == base_mac or old_mac in random_macs:
+            if new_mac == base_mac or new_mac in random_macs:
+                same_set = True
+                break
+    if same_set:
+        green_edges.append((old_mac, new_mac))
+    else:
+        red_edges.append((old_mac, new_mac))
+
+
+#print no of green and red edges
+print(f"Green edges: {len(green_edges)}")
+print(f"Red edges: {len(red_edges)}")
+
+# Assign colors to each base_mac and its random_macs
+colors = list(mcolors.TABLEAU_COLORS.keys())
+node_colors = {}
+for i, (base_mac, random_macs) in enumerate(mac_sets.items()):
+    color = colors[i % len(colors)]
+    node_colors[base_mac] = color
+    for random_mac in random_macs:
+        node_colors[random_mac] = color
+
+
+# Position nodes in rows for each base MAC and its random MACs
+pos = {}
+y = 0  # Initial y-position
+x_spacing = 2  # Horizontal spacing between nodes
+for base_mac, random_macs in mac_sets.items():
+    # Position base MAC node
+    pos[base_mac] = (0, y)
+    # Position each random MAC node in a row to the right of the base MAC
+    for i, random_mac in enumerate(random_macs, 1):
+        pos[random_mac] = (i * x_spacing, y)
+    y -= 1  # Move down for the next row
+
+# Plot the graph without edges
+plt.figure(figsize=(15, 10))
+nx.draw_networkx_nodes(G, pos, node_size=1000, node_color=[node_colors[node] for node in G.nodes()], alpha=0.5)
+#nx.draw_networkx_labels(G, pos, font_size=6)
+#nx.draw_networkx_edges(G, pos, edge_color="red", arrows=True)
+nx.draw_networkx_edges(G, pos, edgelist=green_edges, edge_color='green', arrows=True, width=5)
+nx.draw_networkx_edges(G, pos, edgelist=red_edges, edge_color='red', arrows=True)
+
+i=1
+# Add station names to the left of the first node
+for base_mac, random_macs in mac_sets.items():
+    plt.text(pos[base_mac][0] - 0.5, pos[base_mac][1], f'STA{i}', horizontalalignment='right', verticalalignment='center', fontsize=10, color='black')
+    i += 1
+
+
+# Add re-randomization event numbers below each column
+# Add re-randomization event numbers below each column for the last mac_sets
+last_base_mac, last_random_macs = list(mac_sets.items())[-1]
+for i, random_mac in enumerate([last_base_mac] + last_random_macs, 1):
+    plt.text(pos[random_mac][0], pos[random_mac][1] - 0.4, f'Cycle {i}', horizontalalignment='center', verticalalignment='top', fontsize=10, color='black')
+
+# Print the number of green and red edges on the graph
+plt.text(0.95, 0.95, f"Correct links: {len(green_edges)}", horizontalalignment='left', verticalalignment='top', transform=plt.gca().transAxes, fontsize=12, color='green')
+plt.text(0.95, 0.90, f"Incorrect links: {len(red_edges)}", horizontalalignment='left', verticalalignment='top', transform=plt.gca().transAxes, fontsize=12, color='red')
+plt.text(0.95, 0.85, f"Accuracy: {((len(green_edges) / (len(green_edges) + len(red_edges))) * 100):.3f}%", horizontalalignment='left', verticalalignment='top', transform=plt.gca().transAxes, fontsize=12, color='green')
+plt.title("MAC Address Re-randomization and Linking Accuracy Across Stations", fontsize=16)
+plt.xlabel("Re-randomization Events")
+plt.ylabel("Stations")
+plt.axis("off")
+plt.savefig("mac_transitions_graph.pdf", bbox_inches="tight", format="pdf")
