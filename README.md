@@ -1,13 +1,3 @@
-##This is a support folder for the backport project 
-
-	please refer to my gihub account to check this out
-
-	To run mac80211 hwsim, hostapd and wpa supplicant 
-
-
-	use the script.sh 
-
-	./script.sh
 
 
 # WiFi Simulation Setup Script
@@ -54,7 +44,7 @@ This option runs `wpa_supplicant` in each namespace, effectively simulating the 
 
 This option stops all running `wpa_supplicant` and `hostapd` processes, deletes the namespaces, and removes the `mac80211_hwsim` module from the system.
 
-### 6. Exit the menu
+### 7. Exit the menu
 
 Exits the script.
 
@@ -64,3 +54,88 @@ Exits the script.
 
    ```bash
    ./setup_wifi_simulation.sh
+   ```
+
+# Modified Wmediumd
+
+The `wmediumd` has been modified to suit the project requirements and can be found in the `wmediumd` folder.
+
+## Installation
+
+ To build and install the modified `wmediumd`, use the following commands:
+
+```bash
+cd wmediumd && make
+
+
+
+# Mininet-Wifi
+
+The Mininet is not modified
+
+## Installation 
+	```bash
+	cd mininet
+	sudo ./util/install.sh -a
+	```
+
+# Testing
+
+
+All testing was conducted in the `multiple_tests` folder.
+Different files in this folder demonstrate which mode (WiFi configuration 'a' or 'n') needs to be emulated.
+
+Results are saved under `multiple_tests/iperf3_results`.
+Each subfolder represents a specific scheme:
+  - Subfolders are categorized by mode (with or without `wmediumd`).
+  - Test time folders contain TCP and UDP test results.
+
+Plotting Results
+To generate TCP and UDP plots (with and without `wmediumd`), run:
+```bash
+python3 plots.py
+```
+Modify `plots.py` to specify the folder for plotting results.
+Toggle boolean flags in `plots.py` to include/exclude specific schemes in the plots.
+
+For heatmaps of TCP throughput and retransmissions, use:
+```bash
+python3 multiple_tests/ap_trigger_speed_map.py
+```
+# Linking MAC Addresses
+Use `new_logic_improved_one.py` to link re-randomized MAC addresses for pcap files generated while testing:
+```bash
+python3 linking_macs/new_logic_improved_one.py
+```
+
+ Outputs are saved in:
+  - `linking_macs/ap_trigger.txt`: Linking algorithm output.
+  - `linking_macs/kern_time.txt`: Kernel output.
+
+# Calculate linking accuracy:
+ Edit and run `accuracy_linking.py` by including kernel output and linking algorithm output:
+```bash
+python3 linking_macs/accuracy_linking.py
+```
+
+# Plot an example of linked MAC addresses:
+```bash
+python3 linking_macs/new_graph.py
+```
+
+# Time Drift
+
+Time drift selection is performed randomly using a normal distribution. The parameters for the normal distribution can be modified in the script:
+
+```bash
+python3 linking_macs/drift_selection.py
+```
+
+
+
+
+
+
+
+
+
